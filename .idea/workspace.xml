@@ -4,13 +4,28 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1548599-eb63-40fd-aa4d-394e14193bde" name="Default Changelist" comment="" />
+    <list default="true" id="e1548599-eb63-40fd-aa4d-394e14193bde" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/lib/UI_Screens/Catalogue-Screen/Cart/Components/body.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/UI_Screens/Catalogue-Screen/Cart/Components/cart_card.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/UI_Screens/Catalogue-Screen/Cart/Components/checkout_card.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Components/bottom_navigation.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Components/bottom_navigation.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Models/models.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Models/cart_models.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Provider/provider.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Provider/provider.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Routes/routes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Routes/routes.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Themes/themes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Themes/themes.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/UI_Screens/cart.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/UI_Screens/Catalogue-Screen/Cart/cart.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\modis\.android\avd\Pixel_3_API_30.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[TSAEWKG6WOONTGQG]" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -41,11 +56,12 @@
     <property name="dart.analysis.tool.window.force.activate" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../e_commerce" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\schaffen_task\lib\UI_Screens\Catalogue-Screen\Cart" />
       <recent name="D:\schaffen_task\lib\UI_Screens\Catalogue-Screen" />
     </key>
   </component>
