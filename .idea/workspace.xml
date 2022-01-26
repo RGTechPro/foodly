@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1548599-eb63-40fd-aa4d-394e14193bde" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/Components/bottom_navigation.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/Models/restaurant_model.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/UI_Screens/profile.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/UI_Screens/search.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Models/models.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Models/models.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Routes/routes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Routes/routes.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/UI_Screens/catalogue.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/UI_Screens/catalogue.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/UI_Screens/log_in.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/UI_Screens/log_in.dart" afterDir="false" />
-    </list>
+    <list default="true" id="e1548599-eb63-40fd-aa4d-394e14193bde" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,6 +43,11 @@
     <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\schaffen_task\lib\UI_Screens\Catalogue-Screen" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

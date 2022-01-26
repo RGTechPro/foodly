@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:schaffen_task/Components/custom_text.dart';
 import 'package:schaffen_task/Components/rating.dart';
-import 'package:schaffen_task/Models/models.dart';
+
+import 'package:schaffen_task/Models/restaurant_model.dart';
 class RestaurantGrid extends StatefulWidget {
   const RestaurantGrid({Key? key}) : super(key: key);
 
@@ -46,7 +47,7 @@ class _RestaurantGridState extends State<RestaurantGrid> {
                           color: Colors.amberAccent,
                           position: TextAlign.left
                       ),
-                      CustomRatingBar(),
+                      CustomRatingBar(rating:rating[index] ),
                     ],
                   ),
                 ),
