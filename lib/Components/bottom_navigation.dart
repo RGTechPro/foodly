@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:schaffen_task/UI_Screens/Catalogue-Screen/Cart/cart.dart';
+import 'package:schaffen_task/UI_Screens/Cart/cart.dart';
+
 import 'package:schaffen_task/UI_Screens/Catalogue-Screen/catalogue.dart';
 import 'package:schaffen_task/UI_Screens/profile.dart';
 import 'package:schaffen_task/UI_Screens/search.dart';

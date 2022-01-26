@@ -1,7 +1,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:schaffen_task/Models/cart_models.dart';
-import 'package:schaffen_task/UI_Screens/Catalogue-Screen/Cart/Components/body.dart';
+import 'package:schaffen_task/UI_Screens/Cart/Components/body.dart';
+
 
 import 'Components/checkout_card.dart';
 

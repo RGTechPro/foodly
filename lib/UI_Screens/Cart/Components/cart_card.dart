@@ -3,7 +3,6 @@ import 'package:provider/provider.dart';
 import 'package:schaffen_task/Constants/size_config.dart';
 import 'package:schaffen_task/Models/cart_models.dart';
 import 'package:schaffen_task/Provider/provider.dart';
-import 'package:schaffen_task/UI_Screens/Catalogue-Screen/Cart/Components/checkout_card.dart';
 
 class CartCard extends StatefulWidget {
   const CartCard({
