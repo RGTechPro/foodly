@@ -10,5 +10,5 @@ final Map<String, WidgetBuilder> routes = {
   Cart.routeName: (context) => const Cart(),
   Checkout.routeName: (context) => const Checkout(),
   OrderTracker.routeName: (context) => const OrderTracker(),
-  Catalogue.routeName: (context) => const Catalogue(),
+  home_page.routeName: (context) => const home_page(),
 };
