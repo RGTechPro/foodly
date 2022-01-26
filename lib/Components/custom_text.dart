@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:schaffen_task/Constants/constants.dart';
+import 'package:schaffen_task/Constants/size_config.dart';
 
 Widget CustomText({
   String? text,
@@ -12,7 +13,9 @@ Widget CustomText({
     '$text',
     style: TextStyle(
       color: color,
-      fontSize: fontSize,
+      fontSize: getProportionateScreenWidth(
+        fontSize!,
+      ),
       fontWeight: fontWeight,
     ),
     textAlign: position,
