@@ -16,7 +16,7 @@ class LogIn extends StatelessWidget {
           child: DefaultButton(
             text: 'LogIn',
             press: () {
-              Navigator.pushNamed(context, Catalogue.routeName);
+              Navigator.pushNamed(context, home_page.routeName);
             },
           ),
         ),
