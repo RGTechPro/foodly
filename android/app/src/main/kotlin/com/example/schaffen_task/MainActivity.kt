@@ -1,4 +1,4 @@
-package com.example.schaffen_task
+package com.restro.foodly
 
 import io.flutter.embedding.android.FlutterActivity
 
