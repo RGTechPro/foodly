@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:schaffen_task/cart.dart';
 import 'package:schaffen_task/search.dart';
-
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'account.dart';
 
 void main() {
@@ -66,7 +66,132 @@ List<String> food_name = [
 List<String> prices=[
   "₹910.99","₹1020.10","₹400.22","₹233.90","₹1221.9","₹783.78","₹898.92","₹550.11","₹220.00","₹330.55"
 ];
+List<double> rating=[
+  1.0,2.0,3.0,1.23,1.75,2.9,4.6,5.0,3,3.3
+];
+final List children = [
+  Scaffold(
+    appBar: AppBar(
+      backgroundColor: Colors.black,
+      centerTitle: true,
+      title: Text(
+        "Welcome to Restro",
+        style: TextStyle(color: Colors.white,fontSize: 25),
+      ),
+      shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+              bottomLeft: Radius.circular(25),
+              bottomRight: Radius.circular(25))),
+    ),
+    body: StaggeredGridView.countBuilder(
+      padding: EdgeInsets.fromLTRB(5, 5, 5, 80),
+      crossAxisCount: 4,
+      itemCount: images.length,
+      itemBuilder: (BuildContext context, int index) => GestureDetector(
+        onTap: (){},
+        child: Container(
+          child: Card(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20),
+            ),
+            color: Colors.black,
+            child: Column(
+              children: <Widget>[
+                ClipRRect(
+                    borderRadius: BorderRadius.circular(10),
+                    child: Image.network(images[index])),
+                Container(
+                  padding: EdgeInsets.all(5),
+                  child: Column(
+                    children: [
+                      Text(
+                        food_name[index],
+                        textAlign: TextAlign.left,
+                        style: TextStyle(color: Colors.amberAccent,fontSize: 15),
+                      ),Text(
+                        prices[index],
+                        textAlign: TextAlign.left,
+                        style: TextStyle(color: Colors.amberAccent,fontSize: 17),
+                      ),
+                      RatingBarIndicator(
+                        rating: rating[index],
+                        itemBuilder: (context, index) => Icon(
+                          Icons.star,
+                          color: Colors.amber,
+                        ),
+                        itemCount: 5,
+                        itemSize: 20.0,
+                        direction: Axis.horizontal,
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+            elevation: 20,
+          ),
+        ),
+      ),
+      staggeredTileBuilder: (int index) => new StaggeredTile.fit(2),
+      mainAxisSpacing: 4.0,
+      crossAxisSpacing: 4.0,
+    ),
+  ),
+  Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.black,
+        centerTitle: true,
+        title: Text(
+          "Search",
+          style: TextStyle(color: Colors.white,fontSize: 25),
+        ),
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.only(
+                bottomLeft: Radius.circular(25),
+                bottomRight: Radius.circular(25))),
 
+      ),
+    body: Center(
+      child: Text("Search"),
+    ),
+  ),
+  Scaffold(
+    appBar: AppBar(
+      backgroundColor: Colors.black,
+      centerTitle: true,
+      title: Text(
+        "My Cart",
+        style: TextStyle(color: Colors.white,fontSize: 25),
+      ),
+      shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+              bottomLeft: Radius.circular(25),
+              bottomRight: Radius.circular(25))),
+
+    ),
+    body: Center(
+      child: Text("Cart"),
+    ),
+  ),
+  Scaffold(
+    appBar: AppBar(
+      backgroundColor: Colors.black,
+      centerTitle: true,
+      title: Text(
+        "Profile",
+        style: TextStyle(color: Colors.white,fontSize: 25),
+      ),
+      shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+              bottomLeft: Radius.circular(25),
+              bottomRight: Radius.circular(25))),
+
+    ),
+    body: Center(
+      child: Text("profile"),
+    ),
+  ),
+];
 class _home_pageState extends State<home_page> {
   int _current_index = 0;
   int selected_item_index;
@@ -119,78 +244,12 @@ class _home_pageState extends State<home_page> {
             ),
           ),
         ),
-        body: StaggeredGridView.countBuilder(
-          padding: EdgeInsets.all(5),
-          crossAxisCount: 4,
-          itemCount: images.length,
-          itemBuilder: (BuildContext context, int index) => Container(
-            child: Card(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(20),
-              ),
-              color: Colors.black,
-              child: Column(
-                children: <Widget>[
-                  GestureDetector(
-                    onTap: (){print("pressed : "+index.toString());},
-                    child: ClipRRect(
-                        borderRadius: BorderRadius.circular(10),
-                        child: Image.network(images[index])),
-                  ),
-                  Container(
-                    padding: EdgeInsets.all(5),
-                    child: Column(
-                      children: [
-                        Text(
-                          food_name[index],
-                          textAlign: TextAlign.left,
-                          style: TextStyle(color: Colors.amberAccent,fontSize: 15),
-                        ),Text(
-                          prices[index],
-                          textAlign: TextAlign.left,
-                          style: TextStyle(color: Colors.amberAccent,fontSize: 17),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-              elevation: 20,
-            ),
-          ),
-          staggeredTileBuilder: (int index) => new StaggeredTile.fit(2),
-          mainAxisSpacing: 4.0,
-          crossAxisSpacing: 4.0,
-        ),
+        body: children[_current_index]
       ),
     );
   }
 
   void tapped(int index) {
-    switch (index) {
-      case 0:
-        print("in home");
-        Navigator.pushNamed(context, '/');
-        break;
-
-      case 1:
-        print("in search");
-        // Navigator.pushNamed(context, '/search');
-        break;
-
-      case 2:
-        print("in cart");
-        // Navigator.pushNamed(context, '/cart');
-        break;
-
-      case 3:
-        print("in account");
-        // Navigator.pushNamed(context, '/account');
-        break;
-
-      default:
-        break;
-    }
     setState(() {
       _current_index = index;
     });
