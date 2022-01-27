@@ -5,6 +5,7 @@ import 'package:schaffen_task/Components/button.dart';
 import 'package:schaffen_task/Constants/constants.dart';
 import 'package:schaffen_task/Constants/size_config.dart';
 import 'package:schaffen_task/Provider/provider.dart';
+import 'package:schaffen_task/UI_Screens/Checkout/checkout.dart';
 
 class CheckoutCard extends StatefulWidget {
   const CheckoutCard({
@@ -75,9 +76,9 @@ class _CheckoutCardState extends State<CheckoutCard> {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
+                    const Text(
                       "Total:",
-                      style: const TextStyle(
+                      style: TextStyle(
                         color: Colors.blueAccent,
                         fontSize: 19,
                         fontWeight: FontWeight.bold,
@@ -100,7 +101,9 @@ class _CheckoutCardState extends State<CheckoutCard> {
                   width: getProportionateScreenWidth(190),
                   child: DefaultButton(
                     text: "Check Out",
-                    press: () {},
+                    press: () {
+                      Navigator.pushNamed(context, Checkout.routeName);
+                    },
                   ),
                 ),
               ],

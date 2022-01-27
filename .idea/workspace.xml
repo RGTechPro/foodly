@@ -5,20 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e1548599-eb63-40fd-aa4d-394e14193bde" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/UI_Screens/Catalogue-Screen/Cart/Components/body.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/UI_Screens/Catalogue-Screen/Cart/Components/cart_card.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/UI_Screens/Catalogue-Screen/Cart/Components/checkout_card.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/Models/profile_model.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/UI_Screens/Checkout/Components/body.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/UI_Screens/Checkout/Components/checkout_sumary_card.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/UI_Screens/Checkout/Components/delivery_address.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/UI_Screens/Checkout/Components/order_summary.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Components/bottom_navigation.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Components/bottom_navigation.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Models/models.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Models/cart_models.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Provider/provider.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Provider/provider.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/Routes/routes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Routes/routes.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Themes/themes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Themes/themes.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/UI_Screens/cart.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/UI_Screens/Catalogue-Screen/Cart/cart.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/UI_Screens/Cart/Components/checkout_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/UI_Screens/Cart/Components/checkout_card.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/UI_Screens/Catalogue-Screen/Component/restaurant_grid.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/UI_Screens/Catalogue-Screen/Component/restaurant_grid.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/UI_Screens/checkout.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/UI_Screens/Checkout/checkout.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +50,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="dart.analysis.tool.window.force.activate" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
@@ -61,6 +59,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\schaffen_task\lib\UI_Screens\Checkout" />
       <recent name="D:\schaffen_task\lib\UI_Screens\Catalogue-Screen\Cart" />
       <recent name="D:\schaffen_task\lib\UI_Screens\Catalogue-Screen" />
     </key>
@@ -92,5 +91,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

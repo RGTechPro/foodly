@@ -15,6 +15,7 @@ class _RestaurantGridState extends State<RestaurantGrid> {
   @override
   Widget build(BuildContext context) {
     return StaggeredGridView.countBuilder(
+      shrinkWrap: true,
       padding: const EdgeInsets.fromLTRB(5, 5, 5, 80),
       crossAxisCount: 4,
       itemCount: images.length,
