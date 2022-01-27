@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "672613658818",
+    "project_id": "foodly-5b3cb",
+    "storage_bucket": "foodly-5b3cb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:672613658818:android:7f3d0134364b20842a4b5b",
+        "android_client_info": {
+          "package_name": "com.restro.foodly"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "672613658818-2jd3m5r87t79sh5ge2v36e7ster5q4m4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7JqCGmOBYEKCL4wkLIN12d56Wop4u8ak"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "672613658818-2jd3m5r87t79sh5ge2v36e7ster5q4m4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

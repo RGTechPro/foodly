@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:schaffen_task/Provider/provider.dart';
 import 'package:schaffen_task/Routes/routes.dart';
 import 'package:schaffen_task/Themes/themes.dart';
 
@@ -13,12 +15,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Schaffen',
-      theme: theme(),
-      initialRoute: LogIn.routeName,
-      routes: routes,
+    return ChangeNotifierProvider.value(
+      value:CounterModel(),
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Schaffen',
+        theme: theme(),
+        initialRoute: LogIn.routeName,
+        routes: routes,
+      ),
     );
   }
 }
