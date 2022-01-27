@@ -37,6 +37,7 @@ class OrderSummary extends StatelessWidget {
               width: SizeConfig.screenWidth! / 1.2,
               height: SizeConfig.screenHeight! / 3,
               child: ListView.builder(
+                physics: NeverScrollableScrollPhysics(),
                   scrollDirection: Axis.vertical,
                   shrinkWrap: true,
                   itemCount: 2,
