@@ -6,25 +6,25 @@ ThemeData theme() {
     appBarTheme: appBarTheme(),
     scaffoldBackgroundColor: Colors.white,
     textTheme: textTheme(),
-    inputDecorationTheme: inputDecorationTheme(),
+
     visualDensity: VisualDensity.adaptivePlatformDensity,
   );
 }
 
-InputDecorationTheme inputDecorationTheme() {
-  OutlineInputBorder outlineInputBorder = OutlineInputBorder(
-    borderRadius: BorderRadius.circular(28),
-    borderSide: const BorderSide(color: kTextColor),
-    gapPadding: 10,
-  );
-  return InputDecorationTheme(
-    floatingLabelBehavior: FloatingLabelBehavior.always,
-    contentPadding: const EdgeInsets.symmetric(horizontal: 42, vertical: 20),
-    enabledBorder: outlineInputBorder,
-    focusedBorder: outlineInputBorder,
-    border: outlineInputBorder,
-  );
-}
+// InputDecorationTheme inputDecorationTheme() {
+//   OutlineInputBorder outlineInputBorder = OutlineInputBorder(
+//     borderRadius: BorderRadius.circular(28),
+//     borderSide: const BorderSide(color: kTextColor),
+//     gapPadding: 10,
+//   );
+//   return InputDecorationTheme(
+//     floatingLabelBehavior: FloatingLabelBehavior.always,
+//     contentPadding: const EdgeInsets.symmetric(horizontal: 42, vertical: 20),
+//     enabledBorder: outlineInputBorder,
+//     focusedBorder: outlineInputBorder,
+//     border: outlineInputBorder,
+//   );
+// }
 
 TextTheme textTheme() {
   return const TextTheme(

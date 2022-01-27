@@ -5,24 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e1548599-eb63-40fd-aa4d-394e14193bde" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/Models/profile_model.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/UI_Screens/Checkout/Components/body.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/UI_Screens/Checkout/Components/checkout_sumary_card.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/UI_Screens/Checkout/Components/delivery_address.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/UI_Screens/Checkout/Components/order_summary.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Components/bottom_navigation.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Components/bottom_navigation.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Components/button.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Components/button.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Components/rating.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Components/rating.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Constants/constants.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Constants/constants.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Provider/provider.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Provider/provider.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/Routes/routes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Routes/routes.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/UI_Screens/Cart/Components/checkout_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/UI_Screens/Cart/Components/checkout_card.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Themes/themes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Themes/themes.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/UI_Screens/Catalogue-Screen/Component/restaurant_grid.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/UI_Screens/Catalogue-Screen/Component/restaurant_grid.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/UI_Screens/checkout.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/UI_Screens/Checkout/checkout.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/UI_Screens/Checkout/checkout.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/UI_Screens/Checkout/checkout.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/UI_Screens/log_in.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/UI_Screens/log_in.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/UI_Screens/order_track.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/UI_Screens/search.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[TSAEWKG6WOONTGQG]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\modis\.android\avd\Pixel_4a_API_30.avd]" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -59,6 +65,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\schaffen_task\lib\UI_Screens\Search" />
+      <recent name="D:\schaffen_task\lib\UI_Screens\Order_Tracker\Components" />
       <recent name="D:\schaffen_task\lib\UI_Screens\Checkout" />
       <recent name="D:\schaffen_task\lib\UI_Screens\Catalogue-Screen\Cart" />
       <recent name="D:\schaffen_task\lib\UI_Screens\Catalogue-Screen" />
@@ -73,6 +81,14 @@
       <option name="presentableId" value="Default" />
       <updated>1643220463275</updated>
     </task>
+    <task id="LOCAL-00001" summary="Added Restaurant Detail Screen">
+      <created>1643313350083</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1643313350083</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -91,8 +107,11 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Added Restaurant Detail Screen" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Restaurant Detail Screen" />
   </component>
 </project>

@@ -3,8 +3,9 @@ import 'package:schaffen_task/UI_Screens/Cart/cart.dart';
 
 import 'package:schaffen_task/UI_Screens/Catalogue-Screen/catalogue.dart';
 import 'package:schaffen_task/UI_Screens/profile.dart';
-import 'package:schaffen_task/UI_Screens/search.dart';
+import 'package:schaffen_task/UI_Screens/Search/search.dart';
 
+int _current_index = 0;
 class BottomNavigation extends StatefulWidget {
   const BottomNavigation({Key? key}) : super(key: key);
 
@@ -13,7 +14,7 @@ class BottomNavigation extends StatefulWidget {
 }
 
 class _BottomNavigationState extends State<BottomNavigation> {
-  int _current_index = 0;
+
   List<String> Routes = [
     CatalogueScreen.routeName,
     Search.routeName,
