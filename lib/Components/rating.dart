@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-RatingBarIndicator CustomRatingBar({double?rating})
+RatingBarIndicator CustomRatingBar({double?rating,double?size=20})
 {
   return RatingBarIndicator(
     rating: rating!,
@@ -9,7 +9,7 @@ RatingBarIndicator CustomRatingBar({double?rating})
       color: Colors.amber,
     ),
     itemCount: 5,
-    itemSize: 20.0,
+    itemSize: size!,
     direction: Axis.horizontal,
   );
 }

@@ -33,3 +33,33 @@ class DefaultButton extends StatelessWidget {
     );
   }
 }
+
+Widget CustomRaisedButton({
+  Color? backcolor,
+  Color? shadowColor,
+  double? radius,
+VoidCallback? pressed,
+  String? text,
+  EdgeInsetsGeometry? padding
+}) {
+  return ElevatedButton(
+
+    onPressed: ()=>
+      pressed,
+
+    style: ButtonStyle(
+      padding: MaterialStateProperty.all(padding),
+      shadowColor: MaterialStateProperty.all(shadowColor),
+      backgroundColor: MaterialStateProperty.all(backcolor),
+      shape: MaterialStateProperty.all(
+          RoundedRectangleBorder(borderRadius: BorderRadius.circular(radius!),),),
+    ),
+    child:  Text(
+      text!,
+      style: TextStyle(
+        color: Colors.amber,
+        fontSize: 25,
+      ),
+    ),
+  );
+}

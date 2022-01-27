@@ -4,6 +4,7 @@ import 'package:schaffen_task/Components/custom_text.dart';
 import 'package:schaffen_task/Components/rating.dart';
 
 import 'package:schaffen_task/Models/restaurant_model.dart';
+import 'package:schaffen_task/UI_Screens/Restaurant_Details/restaurant_detail.dart';
 class RestaurantGrid extends StatefulWidget {
   const RestaurantGrid({Key? key}) : super(key: key);
 
@@ -20,7 +21,9 @@ class _RestaurantGridState extends State<RestaurantGrid> {
       crossAxisCount: 4,
       itemCount: images.length,
       itemBuilder: (BuildContext context, int index) => GestureDetector(
-        onTap: (){},
+        onTap: (){
+          Navigator.pushNamed(context, RestaurantDetails.routeName);
+        },
         child: Container(
           child: Card(
             shape: RoundedRectangleBorder(
