@@ -4,10 +4,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:provider/provider.dart';
+import 'package:schaffen_task/Provider/account.dart';
 
 class Auth extends ChangeNotifier {
    User? _firebaseUser; 
    bool isLoading = false;
+     String mobileNumber = 'Unknown';
   setUser(User? user) {
     _firebaseUser = user;
     notifyListeners();
@@ -79,10 +81,8 @@ class Auth extends ChangeNotifier {
       final snackBar = SnackBar(content: Text(e.toString()));
       ScaffoldMessenger.of(context).showSnackBar(snackBar);
     }
-    // setName('Unknown');
-    // setEmail('Unknown');
-    // mobileNumber = 'Unknown';
-  //  Provider.of<Account>(context, listen: false).logout();
+   
+   Provider.of<Account>(context, listen: false).logout();
     notifyListeners();
   }
 

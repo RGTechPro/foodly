@@ -1,21 +1,29 @@
 
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import 'package:schaffen_task/Constants/size_config.dart';
+import 'package:schaffen_task/Provider/account.dart';
+import 'package:schaffen_task/Services/auth_services.dart';
 import 'package:schaffen_task/UI_Screens/Deliver-Address/Components/previous_address.dart';
 import 'package:schaffen_task/UI_Screens/Deliver-Address/address.dart';
 import 'package:schaffen_task/UI_Screens/MyOrders/my_orders.dart';
 import 'package:schaffen_task/UI_Screens/Profile/Components/profile_item.dart';
+import 'package:schaffen_task/UI_Screens/log_in.dart';
 
 
 
 class Body extends StatelessWidget {
-  const Body({Key? key}) : super(key: key);
-  static String routeName = "/profile";
 
+  static String routeName = "/profile";
+final _firebase = FirebaseFirestore.instance;
+  User? _firebaseUser = FirebaseAuth.instance.currentUser;
   @override
   Widget build(BuildContext context) {
-
+  
+    var accountProvider = Provider.of<Account>(context, listen: false);
     return SingleChildScrollView(
       child: Column(
           children: [
@@ -70,9 +78,20 @@ class Body extends StatelessWidget {
                     },
                       child: p_card_w(namee: "My Addesses",icons: Icons.add_shopping_cart,route: "test")),
                   const SizedBox(height: 15,),
-                  p_card_w(namee: "Help",icons: Icons.add_shopping_cart,route: "test"),
+                  InkWell(
+                    onTap: (){},
+                    
+                    child: p_card_w(namee: "Help",icons: Icons.add_shopping_cart,route: "test")),
                   const SizedBox(height: 15,),
-                  p_card_w(namee: "Logout",icons: Icons.add_shopping_cart,route: "test"),
+                  InkWell(
+                    onTap: (){
+                            Provider.of<Auth>(context, listen: false).logout(context);
+      Provider.of<Account>(context, listen: false).logout();
+      Navigator.of(context).popUntil((route) => route.isFirst);
+      Navigator.pushReplacement(
+          context, MaterialPageRoute(builder: (context) =>LogIn()));
+                    },
+                    child: p_card_w(namee: "Logout",icons: Icons.add_shopping_cart,route: "test")),
                 ],
               ),
             ),
