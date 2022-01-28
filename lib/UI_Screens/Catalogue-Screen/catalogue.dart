@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:schaffen_task/Components/appbar.dart';
 import 'package:schaffen_task/Components/bottom_navigation.dart';
+import 'package:schaffen_task/Constants/size_config.dart';
 import 'package:schaffen_task/UI_Screens/Catalogue-Screen/Component/restaurant_grid.dart';
 class CatalogueScreen extends StatefulWidget {
   const CatalogueScreen({Key? key}) : super(key: key);
@@ -11,6 +12,8 @@ class CatalogueScreen extends StatefulWidget {
 class _CatalogueScreenState extends State<CatalogueScreen> {
   @override
   Widget build(BuildContext context) {
+     SizeConfig().init(context);
+
     return SafeArea(
       child: Scaffold(
         // backgroundColor: Color.fromRGBO(70, 70, 70, 50) ,
