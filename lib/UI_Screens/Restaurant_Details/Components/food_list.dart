@@ -41,7 +41,7 @@ class FoodListView extends StatelessWidget {
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      const VegBadgeView(),
+                      VegBadgeView(),
                       UIHelper.horizontalSpaceMedium(),
                       Expanded(
                         child: Column(

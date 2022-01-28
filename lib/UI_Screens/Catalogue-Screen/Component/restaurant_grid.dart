@@ -3,10 +3,9 @@ import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:schaffen_task/Components/custom_text.dart';
 import 'package:schaffen_task/Components/rating.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:schaffen_task/Models/restaurant_model.dart';
 import 'package:schaffen_task/Models/restro_data.dart';
 import 'package:schaffen_task/UI_Screens/Restaurant_Details/restaurant_detail.dart';
-import 'package:firebase_core/firebase_core.dart';
+
 
 class RestaurantGrid extends StatefulWidget {
   const RestaurantGrid({Key? key}) : super(key: key);
@@ -23,7 +22,7 @@ class _RestaurantGridState extends State<RestaurantGrid> {
       future: _firebase.collection('data').get(),
       builder: (context, snapshot) {
         if (snapshot.hasError) {
-          return Center(
+          return const Center(
               child: Text(
             'Something went wrong',
          
@@ -31,7 +30,7 @@ class _RestaurantGridState extends State<RestaurantGrid> {
         }
 
         if (snapshot.hasData && !snapshot.data!.docs.isNotEmpty) {
-          return Text("Error");
+          return const Text("Error");
         }
 
         if (snapshot.connectionState == ConnectionState.done) {
@@ -94,7 +93,7 @@ class _RestaurantGridState extends State<RestaurantGrid> {
             crossAxisSpacing: 4.0,
           );
         }
-          return Center(
+          return const Center(
                   child: CircularProgressIndicator(
                     color: Colors.red,
                   ),
