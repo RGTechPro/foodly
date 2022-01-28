@@ -1,7 +1,6 @@
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:schaffen_task/Constants/constants.dart';
 import 'package:schaffen_task/Constants/divider.dart';
 import 'package:schaffen_task/Constants/size_config.dart';
 import 'package:schaffen_task/Constants/ui.dart';
@@ -9,7 +8,7 @@ import 'package:schaffen_task/Provider/provider.dart';
 import 'package:schaffen_task/UI_Screens/Checkout/Components/delivery_address.dart';
 import 'package:schaffen_task/UI_Screens/Checkout/Components/food_card.dart';
 import 'package:schaffen_task/UI_Screens/Order_Tracker/Components/order_summary.dart';
-import 'package:schaffen_task/UI_Screens/Restaurant_Details/Components/veg_portion.dart';
+
 
 class Body extends StatelessWidget {
   const Body({Key? key}) : super(key: key);
@@ -78,7 +77,7 @@ class _OrderViewState extends State<_OrderView> {
             ],
           ),
           UIHelper.verticalSpaceLarge(),
-          Container(
+          SizedBox(
             height: getProportionateScreenHeight(120),
             child: ListView.builder(
               scrollDirection: Axis.vertical,

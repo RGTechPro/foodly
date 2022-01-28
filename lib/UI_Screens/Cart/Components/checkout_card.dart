@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
 import 'package:schaffen_task/Components/button.dart';
-import 'package:schaffen_task/Constants/constants.dart';
 import 'package:schaffen_task/Constants/size_config.dart';
 import 'package:schaffen_task/Provider/provider.dart';
 import 'package:schaffen_task/UI_Screens/Checkout/checkout.dart';

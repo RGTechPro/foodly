@@ -6,8 +6,7 @@ import 'package:schaffen_task/Components/suffix_icon.dart';
 import 'package:schaffen_task/Constants/constants.dart';
 import 'package:schaffen_task/Constants/size_config.dart';
 import 'package:schaffen_task/UI_Screens/Catalogue-Screen/catalogue.dart';
-import 'package:schaffen_task/UI_Screens/Checkout/Components/delivery_address.dart';
-import 'package:schaffen_task/UI_Screens/Deliver-Address/address.dart';
+
 
 class CompleteProfileForm extends StatefulWidget {
   const CompleteProfileForm({Key? key}) : super(key: key);

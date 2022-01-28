@@ -7,6 +7,8 @@ import 'package:schaffen_task/Models/cart_models.dart';
 import 'cart_card.dart';
 
 class Body extends StatefulWidget {
+  const Body({Key? key}) : super(key: key);
+
   @override
   _BodyState createState() => _BodyState();
 }
@@ -21,7 +23,7 @@ class _BodyState extends State<Body> {
       child: ListView.builder(
         itemCount: demoCarts!.length,
         itemBuilder: (context, index) =>  Padding(
-          padding: EdgeInsets.symmetric(vertical: 10),
+          padding: const EdgeInsets.symmetric(vertical: 10),
           child:CartCard(cart: demoCarts![index],),
           // Dismissible(
           //   key: Key(demoCarts[index].product.id.toString()),

@@ -1,7 +1,7 @@
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
-class p_card_w extends StatelessWidget {
-  p_card_w({Key? key,required this.namee,required this.icons,required this.route}) : super(key: key);
+class ProfileCard extends StatelessWidget {
+  ProfileCard({Key? key,required this.namee,required this.icons,required this.route}) : super(key: key);
   String namee,route;
   IconData icons;
   @override
@@ -17,7 +17,7 @@ class p_card_w extends StatelessWidget {
           child: Center(
             child: Text(
               namee,
-              style: TextStyle(color: Colors.amber,fontSize: 20,fontWeight: FontWeight.bold),
+              style: const TextStyle(color: Colors.amber,fontSize: 20,fontWeight: FontWeight.bold),
             ),
           ),
         ))

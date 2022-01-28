@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:schaffen_task/Constants/constants.dart';
 import 'package:schaffen_task/Constants/ui.dart';
-import 'package:schaffen_task/UI_Screens/Deliver-Address/address.dart';
+import 'package:schaffen_task/UI_Screens/Deliver-Address/Components/previous_address.dart';
 import 'package:schaffen_task/UI_Screens/Order_Tracker/order_track.dart';
 
 class AddressPaymentView extends StatelessWidget {
   double? total;
   String? address;
 
-  AddressPaymentView({Key? key,this.total,this.address}) : super(key: key);
+  AddressPaymentView({Key? key, this.total, this.address}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -89,16 +89,18 @@ class AddressPaymentView extends StatelessWidget {
                 ),
               ),
               InkWell(
-
                 child: Text(
-                  'ADD ADDRESS',
+                  'SELECT ADDRESS',
                   style: Theme.of(context)
                       .textTheme
                       .subtitle2!
                       .copyWith(color: kPrimaryColor),
                 ),
                 onTap: () {
-                  Navigator.pushNamed(context, DeliAddress.routeName);
+                  Navigator.pushNamed(
+                    context,
+                    PreviousAddress.routeName,
+                  );
                 },
               ),
               UIHelper.verticalSpaceMedium(),
@@ -136,7 +138,7 @@ class AddressPaymentView extends StatelessWidget {
             ),
             Expanded(
               child: InkWell(
-                onTap: (){
+                onTap: () {
                   Navigator.pushNamed(context, OrderTracker.routeName);
                 },
                 child: Container(
