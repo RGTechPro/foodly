@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'divider.dart';
+
 class UIHelper {
   static const double _verticalSpaceExtraSmall = 4.0;
   static const double _verticalSpaceSmall = 8.0;
@@ -55,6 +57,10 @@ Color getOrderdeliveredTimelineColor(String orderStatus) {
   else
     return Colors.grey;
 }
+CustomDividerView buildDivider() => CustomDividerView(
+  dividerHeight: 1.0,
+  color: Colors.grey[400],
+);
 Expanded buildVerticalStack(
     BuildContext context, String title, String subtitle) =>
     Expanded(

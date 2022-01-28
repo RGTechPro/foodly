@@ -3,8 +3,8 @@ import 'package:provider/provider.dart';
 import 'package:schaffen_task/Provider/provider.dart';
 
 class VegBadgeView extends StatelessWidget {
-  const VegBadgeView({Key? key}) : super(key: key);
-
+   VegBadgeView({Key? key,this.isVeg}) : super(key: key);
+   bool? isVeg=true;
   @override
   Widget build(BuildContext context) {
     final _counter = Provider.of<CounterModel>(context);
@@ -14,14 +14,14 @@ class VegBadgeView extends StatelessWidget {
       width: 15.0,
       decoration: BoxDecoration(
         border: Border.all(
-          color: _counter.isVeg ? Colors.green[800]! : Colors.redAccent,
+          color: _counter.isVeg&&isVeg! ? Colors.green[800]! : Colors.redAccent,
         ),
       ),
       child: ClipOval(
         child: Container(
           height: 5.0,
           width: 5.0,
-          color: _counter.isVeg ? Colors.green[800]! : Colors.redAccent,
+          color: _counter.isVeg&&isVeg! ? Colors.green[800]! : Colors.redAccent,
         ),
       ),
     );
