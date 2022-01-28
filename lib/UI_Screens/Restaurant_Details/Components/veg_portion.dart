@@ -14,14 +14,14 @@ class VegBadgeView extends StatelessWidget {
       width: 15.0,
       decoration: BoxDecoration(
         border: Border.all(
-          color: _counter.isVeg&&isVeg! ? Colors.green[800]! : Colors.redAccent,
+          color: _counter.isVeg&&isVeg==true ? Colors.green[800]! : Colors.redAccent,
         ),
       ),
       child: ClipOval(
         child: Container(
           height: 5.0,
           width: 5.0,
-          color: _counter.isVeg&&isVeg! ? Colors.green[800]! : Colors.redAccent,
+          color: _counter.isVeg&&isVeg==true ? Colors.green[800]! : Colors.redAccent,
         ),
       ),
     );
