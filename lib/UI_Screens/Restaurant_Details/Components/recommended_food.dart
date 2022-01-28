@@ -69,7 +69,7 @@ class _RecommendedFoodViewState extends State<RecommendedFoodView> {
                       UIHelper.verticalSpaceExtraSmall(),
                       Row(
                         children: <Widget>[
-                          const VegBadgeView(),
+                           VegBadgeView(),
                           UIHelper.horizontalSpaceExtraSmall(),
                           Flexible(
                             child: Text(
