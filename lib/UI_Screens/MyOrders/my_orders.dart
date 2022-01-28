@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 import 'package:schaffen_task/Components/custom_text.dart';
 import 'package:schaffen_task/Constants/constants.dart';
@@ -29,7 +29,7 @@ class MyOrders extends StatelessWidget {
           ),
         ),
       ),
-      body: Center(
+      body: const Center(
         child: SizedBox(
           child: Body(),
         ),

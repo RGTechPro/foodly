@@ -54,7 +54,7 @@ class _CheckoutSummaryCardState extends State<CheckoutSummaryCard> {
           ),
         ),
         const SizedBox(width: 20),
-        Container(
+        SizedBox(
           width: getProportionateScreenWidth(80),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -90,7 +90,7 @@ class _CheckoutSummaryCardState extends State<CheckoutSummaryCard> {
                           Icons.remove,
                         )),
                   ),
-                  SizedBox(width: 8,),
+                  const SizedBox(width: 8,),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
@@ -102,7 +102,7 @@ class _CheckoutSummaryCardState extends State<CheckoutSummaryCard> {
                       ),
                     ],
                   ),
-                  SizedBox(width: 8,),
+                  const SizedBox(width: 8,),
                   InkWell(
                     onTap: () {
                       increment(price: widget.cart!.price);

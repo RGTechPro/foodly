@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -156,7 +156,7 @@ class _OrderNowViewState extends State<_OrderNowView> {
                   .copyWith(fontSize: 18.0),
             ),
           ),
-          RecommendedFoodView(),
+          const RecommendedFoodView(),
           const CustomDividerView(dividerHeight: 15.0),
           FoodListView(
             title: 'Breakfast',

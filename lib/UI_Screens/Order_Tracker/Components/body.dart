@@ -219,13 +219,13 @@ class _BodyState extends State<Body> {
 
 
                       style: ButtonStyle(
-                        padding: MaterialStateProperty.all(EdgeInsets.fromLTRB(20, 0, 20, 0)),
+                        padding: MaterialStateProperty.all(const EdgeInsets.fromLTRB(20, 0, 20, 0)),
                         shadowColor: MaterialStateProperty.all(Colors.amber),
                         backgroundColor: MaterialStateProperty.all(Colors.black),
                         shape: MaterialStateProperty.all(
                           RoundedRectangleBorder(borderRadius: BorderRadius.circular(20),),),
                       ),
-                      child:  Text(
+                      child:  const Text(
                         'Order Summary',
                         style: TextStyle(
                           color: Colors.amber,

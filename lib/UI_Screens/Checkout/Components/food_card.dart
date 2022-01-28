@@ -22,7 +22,7 @@ class _FoodCardState extends State<FoodCard> {
       children: <Widget>[
         VegBadgeView(isVeg: widget.isVeg!,),
         UIHelper.horizontalSpaceSmall(),
-        Container(
+        SizedBox(
           width: getProportionateScreenWidth(150),
           child: FittedBox(
             fit: BoxFit.cover,

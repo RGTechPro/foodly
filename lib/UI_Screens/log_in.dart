@@ -1,11 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:schaffen_task/Components/button.dart';
 import 'package:schaffen_task/Constants/size_config.dart';
 import 'package:schaffen_task/Services/auth_services.dart';
 import 'package:schaffen_task/UI_Screens/Catalogue-Screen/catalogue.dart';
-import 'package:schaffen_task/UI_Screens/Deliver-Address/address.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
 
 class LogIn extends StatefulWidget {
@@ -25,14 +23,14 @@ class _LogInState extends State<LogIn> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
+            const Text(
               'FOODLY',
               style: TextStyle(
                   fontSize: 55,
                   color: Colors.brown,
                   fontWeight: FontWeight.bold),
             ),
-            SizedBox(
+            const SizedBox(
               height: 50,
             ),
             SizedBox(
@@ -57,7 +55,7 @@ class _LogInState extends State<LogIn> {
                     context,
                     CatalogueScreen.routeName,
                   );
-                  final snackBar = SnackBar(content: Text('Logged In!'));
+                  final snackBar = const SnackBar(content: Text('Logged In!'));
                   ScaffoldMessenger.of(context).showSnackBar(snackBar);
                 }
                 setState(() {
@@ -71,7 +69,7 @@ class _LogInState extends State<LogIn> {
               }
                   
                 },
-              ): CircularProgressIndicator(
+              ): const CircularProgressIndicator(
             color: Colors.redAccent,
           ),
             )
