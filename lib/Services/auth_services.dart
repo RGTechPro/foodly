@@ -1,7 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:provider/provider.dart';
 
 class Auth extends ChangeNotifier {
    User? _firebaseUser; 
@@ -60,6 +62,28 @@ class Auth extends ChangeNotifier {
           .catchError((error) => print("Failed to add user: $error"));
     }
   }
+  Future<void> logout(BuildContext context) async {
+    /// Method to Logout the `FirebaseUser` (`_firebaseUser`)
+    final GoogleSignIn googleSignIn = GoogleSignIn();
 
+    try {
+      // signout code
+      await FirebaseAuth.instance.signOut();
+      await googleSignIn.signOut();
+      _firebaseUser = null;
+      final snackBar = SnackBar(content: Text('Logged Out!'));
+      ScaffoldMessenger.of(context).showSnackBar(snackBar);
+      // Provider.of<CartData>(context, listen: false).clearCartData();
+      // Provider.of<CartData>(context, listen: false).cleara();
+    } catch (e) {
+      final snackBar = SnackBar(content: Text(e.toString()));
+      ScaffoldMessenger.of(context).showSnackBar(snackBar);
+    }
+    // setName('Unknown');
+    // setEmail('Unknown');
+    // mobileNumber = 'Unknown';
+  //  Provider.of<Account>(context, listen: false).logout();
+    notifyListeners();
+  }
 
 }
