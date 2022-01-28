@@ -12,7 +12,21 @@ class PreviousAddress extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        centerTitle: true,
+        backgroundColor: kPrimaryColor,
+        title: CustomText(
+          text: 'My Addresses',
+          fontWeight: FontWeight.bold,
+          fontSize: 22,
+        ),
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+            bottomLeft: Radius.circular(15),
+            bottomRight: Radius.circular(15),
+          ),
+        ),
+      ),
       bottomNavigationBar: BottomAppBar(
         child: InkWell(
           onTap: ()
@@ -26,13 +40,14 @@ class PreviousAddress extends StatelessWidget {
                 topLeft: Radius.circular(20),
                 topRight: Radius.circular(20),
               ),
-              color: kPrimaryColor,
+              color: Colors.greenAccent,
             ),
             child: Center(
               child: CustomText(
-                  text: 'Add Address',
+                  text: 'Add New Address',
                   fontSize: 24,
-                  fontWeight: FontWeight.w500
+                  fontWeight: FontWeight.bold,
+
               ),
             ),
           ),

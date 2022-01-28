@@ -5,46 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e1548599-eb63-40fd-aa4d-394e14193bde" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/icons/Error.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/icons/Location point.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/icons/Phone.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/icons/User.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/Components/form_error.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/Components/suffix_icon.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/UI_Screens/Checkout/Components/food_card.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/UI_Screens/Deliver-Address/Components/address_card.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/UI_Screens/Deliver-Address/Components/body.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/UI_Screens/Deliver-Address/Components/complete_form.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/UI_Screens/Deliver-Address/Components/previous_address.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/UI_Screens/Deliver-Address/address.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/UI_Screens/MyOrders/Components/body.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/UI_Screens/MyOrders/Components/order_card.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/UI_Screens/MyOrders/my_orders.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/UI_Screens/Order_Tracker/Components/order_summary.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/UI_Screens/Profile/Components/body.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/UI_Screens/Profile/Components/profile_item.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.flutter-plugins" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Components/appbar.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Components/appbar.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Components/bottom_navigation.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Components/bottom_navigation.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Constants/constants.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Constants/constants.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Constants/ui.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Constants/ui.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Routes/routes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Routes/routes.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/UI_Screens/Catalogue-Screen/Component/restaurant_grid.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/UI_Screens/Catalogue-Screen/Component/restaurant_grid.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/UI_Screens/Checkout/Components/body.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/UI_Screens/Checkout/Components/body.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/UI_Screens/Checkout/Components/delivery_address.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/UI_Screens/Checkout/Components/delivery_address.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/UI_Screens/Checkout/Components/order_summary.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/UI_Screens/Checkout/checkout.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/UI_Screens/Checkout/checkout.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/UI_Screens/Order_Tracker/Components/body.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/UI_Screens/Order_Tracker/Components/body.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/UI_Screens/Restaurant_Details/Components/food_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/UI_Screens/Restaurant_Details/Components/food_list.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/UI_Screens/Restaurant_Details/Components/recommended_food.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/UI_Screens/Restaurant_Details/Components/recommended_food.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/UI_Screens/Restaurant_Details/Components/veg_portion.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/UI_Screens/Restaurant_Details/Components/veg_portion.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/UI_Screens/log_in.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/UI_Screens/log_in.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/UI_Screens/profile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/UI_Screens/Profile/profile.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/UI_Screens/Deliver-Address/Components/previous_address.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/UI_Screens/Deliver-Address/Components/previous_address.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/generated_plugin_registrant.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated_plugin_registrant.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,7 +124,77 @@
       <option name="project" value="LOCAL" />
       <updated>1643361595018</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Delivery Address Added">
+      <created>1643375763245</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1643375763245</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Profile Page added">
+      <created>1643375837200</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1643375837200</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Order Tracker updated">
+      <created>1643375906076</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1643375906076</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Checkout Page updated">
+      <created>1643375986200</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1643375986200</updated>
+    </task>
+    <task id="LOCAL-00013" summary="My Orders added">
+      <created>1643376035519</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1643376035519</updated>
+    </task>
+    <task id="LOCAL-00014" summary="New assets added">
+      <created>1643376060491</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1643376060491</updated>
+    </task>
+    <task id="LOCAL-00015" summary="New components added">
+      <created>1643376086482</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1643376086482</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Restaurant Details Page updated">
+      <created>1643376128639</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1643376128639</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Routes updated">
+      <created>1643376139125</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1643376139125</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Constants updated">
+      <created>1643376157530</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1643376157530</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -191,6 +225,16 @@
     <MESSAGE value="Constants added" />
     <MESSAGE value="Update" />
     <MESSAGE value="Merge Conflicts resolved" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge Conflicts resolved" />
+    <MESSAGE value="Delivery Address Added" />
+    <MESSAGE value="Profile Page added" />
+    <MESSAGE value="Order Tracker updated" />
+    <MESSAGE value="Checkout Page updated" />
+    <MESSAGE value="My Orders added" />
+    <MESSAGE value="New assets added" />
+    <MESSAGE value="New components added" />
+    <MESSAGE value="Restaurant Details Page updated" />
+    <MESSAGE value="Routes updated" />
+    <MESSAGE value="Constants updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="Constants updated" />
   </component>
 </project>
