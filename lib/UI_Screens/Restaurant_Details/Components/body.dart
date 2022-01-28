@@ -10,6 +10,9 @@ import 'package:schaffen_task/Provider/provider.dart';
 import 'package:schaffen_task/UI_Screens/Restaurant_Details/Components/food_list.dart';
 import 'package:schaffen_task/UI_Screens/Restaurant_Details/Components/recommended_food.dart';
 import 'package:schaffen_task/UI_Screens/Restaurant_Details/Components/toggle.dart';
+import 'package:schaffen_task/Provider/restro.dart';
+import 'package:provider/provider.dart';
+import 'package:schaffen_task/Models/restaurant_model.dart';
 
 
 class Body extends StatefulWidget {

@@ -33,4 +33,10 @@ class Account extends ChangeNotifier {
     _mobileNo = null;
     _email = null;
   }
+
+  String city = 'mumbai';
+  changeCity(String new_city) {
+    this.city = new_city.toLowerCase();
+    notifyListeners();
+  }
 }

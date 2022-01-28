@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:schaffen_task/Components/appbar.dart';
 import 'package:schaffen_task/Components/bottom_navigation.dart';
 import 'package:schaffen_task/Constants/size_config.dart';
+import 'package:schaffen_task/Provider/account.dart';
 import 'package:schaffen_task/UI_Screens/Catalogue-Screen/Component/restaurant_grid.dart';
 import 'package:schaffen_task/UI_Screens/Profile/profile.dart';
 import 'package:schaffen_task/UI_Screens/Search/search.dart';
@@ -14,7 +16,7 @@ class CatalogueScreen extends StatefulWidget {
 }
 
 class _CatalogueScreenState extends State<CatalogueScreen> {
-  List<String> cities = ["Mumbai", "Delhi", "Bangalore", "Chennai", "Kolkata"];
+  List<String> cities = ["Mumbai", "Delhi", "Bangalore"];
   String init_val = "Mumbai";
 
   @override
@@ -68,6 +70,8 @@ class _CatalogueScreenState extends State<CatalogueScreen> {
                                 onChanged: (String? newValue) {
                                   setState(() {
                                     init_val = newValue!;
+                                    Provider.of<Account>(context,listen: false)
+                                        .changeCity(newValue);
                                   });
                                 }),
                           ],

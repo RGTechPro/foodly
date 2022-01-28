@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:provider/provider.dart';
 import 'package:schaffen_task/Components/custom_text.dart';
 import 'package:schaffen_task/Components/rating.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:schaffen_task/Models/restro_data.dart';
+import 'package:schaffen_task/Provider/account.dart';
+import 'package:schaffen_task/Provider/restro.dart';
 import 'package:schaffen_task/UI_Screens/Restaurant_Details/restaurant_detail.dart';
-
 
 class RestaurantGrid extends StatefulWidget {
   const RestaurantGrid({Key? key}) : super(key: key);
@@ -16,16 +18,16 @@ class RestaurantGrid extends StatefulWidget {
 
 class _RestaurantGridState extends State<RestaurantGrid> {
   final _firebase = FirebaseFirestore.instance;
+
   @override
   Widget build(BuildContext context) {
     return FutureBuilder<QuerySnapshot>(
-      future: _firebase.collection('data').get(),
+      future: _firebase.collection(Provider.of<Account>(context).city).get(),
       builder: (context, snapshot) {
         if (snapshot.hasError) {
           return const Center(
               child: Text(
             'Something went wrong',
-         
           ));
         }
 
@@ -50,6 +52,8 @@ class _RestaurantGridState extends State<RestaurantGrid> {
                   veg: data['r_menu']['veg']);
               return GestureDetector(
                 onTap: () {
+                  Provider.of<Restro>(context,listen: false).restro = restroData;
+
                   Navigator.pushNamed(context, RestaurantDetails.routeName);
                 },
                 child: Container(
@@ -69,12 +73,12 @@ class _RestaurantGridState extends State<RestaurantGrid> {
                             children: [
                               CustomText(
                                   text: restroData.r_name,
-                                  fontSize: 15,
+                                  fontSize: 17,
                                   color: Colors.amberAccent,
                                   position: TextAlign.left),
                               CustomText(
                                   text: restroData.r_addr,
-                                  fontSize: 17,
+                                  fontSize: 15,
                                   color: Colors.amberAccent,
                                   position: TextAlign.left),
                               CustomRatingBar(rating: restroData.r_rating),
@@ -93,11 +97,11 @@ class _RestaurantGridState extends State<RestaurantGrid> {
             crossAxisSpacing: 4.0,
           );
         }
-          return const Center(
-                  child: CircularProgressIndicator(
-                    color: Colors.red,
-                  ),
-                );
+        return const Center(
+          child: CircularProgressIndicator(
+            color: Colors.red,
+          ),
+        );
       },
     );
   }

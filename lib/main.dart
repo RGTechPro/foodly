@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:schaffen_task/Provider/account.dart';
 import 'package:schaffen_task/Provider/provider.dart';
+import 'package:schaffen_task/Provider/restro.dart';
 import 'package:schaffen_task/Routes/routes.dart';
 import 'package:schaffen_task/Services/auth_services.dart';
 import 'package:schaffen_task/Themes/themes.dart';
@@ -25,6 +26,7 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(create: (context)=>Auth()),
         ChangeNotifierProvider(create: (context)=>Account()),
+        ChangeNotifierProvider(create: (context)=>Restro()),
        ChangeNotifierProvider.value(
         value:CounterModel(),
        
