@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import 'package:schaffen_task/Components/custom_text.dart';
 import 'package:schaffen_task/Components/rating.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:schaffen_task/Models/product_data.dart';
 import 'package:schaffen_task/Models/restro_data.dart';
 import 'package:schaffen_task/Provider/account.dart';
 import 'package:schaffen_task/Provider/restro.dart';
@@ -44,15 +45,32 @@ class _RestaurantGridState extends State<RestaurantGrid> {
             itemBuilder: (BuildContext context, int index) {
               DocumentSnapshot data = snapshot.data!.docs[index];
               RestroData restroData = RestroData(
-                  r_name: data['r_name'],
-                  r_addr: data['r_addr'],
-                  r_image: data['r_image'],
-                  r_rating: data['r_rating'],
-                  non_veg: data['r_menu']['non_veg'],
-                  veg: data['r_menu']['veg']);
+                r_name: data['r_name'],
+                r_addr: data['r_addr'],
+                r_image: data['r_image'],
+                r_rating: data['r_rating'],
+              );
+              int n = data['r_menu']['veg'].length;
+              for (int i = 0; i < n; i++) {
+                restroData.veg.add(ProductData(
+                    i_name: data['r_menu']['veg'][i]['i_name'],
+                    i_image: data['r_menu']['veg'][i]['i_image'],
+                    i_price: data['r_menu']['veg'][i]['i_price'].toDouble(),
+                    i_rate: data['r_menu']['veg'][i]['i_rate'].toDouble(),i_votes: data['r_menu']['veg'][i]['i_votes'])) ;
+              }
+                int nv = data['r_menu']['non_veg'].length;
+              for (int i = 0; i < nv; i++) {
+                restroData.non_veg.add (ProductData(
+                    i_name: data['r_menu']['non_veg'][i]['i_name'],
+                    i_image: data['r_menu']['non_veg'][i]['i_image'],
+                    i_price: data['r_menu']['non_veg'][i]['i_price'].toDouble(),
+                    i_rate: data['r_menu']['non_veg'][i]['i_rate'].toDouble(),i_votes: data['r_menu']['non_veg'][i]['i_votes'])) ;
+              }
+
               return GestureDetector(
                 onTap: () {
-                  Provider.of<Restro>(context,listen: false).restro = restroData;
+                  Provider.of<Restro>(context, listen: false).restro =
+                      restroData;
 
                   Navigator.pushNamed(context, RestaurantDetails.routeName);
                 },

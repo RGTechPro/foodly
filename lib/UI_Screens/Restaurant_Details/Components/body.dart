@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -11,8 +10,6 @@ import 'package:schaffen_task/UI_Screens/Restaurant_Details/Components/food_list
 import 'package:schaffen_task/UI_Screens/Restaurant_Details/Components/recommended_food.dart';
 import 'package:schaffen_task/UI_Screens/Restaurant_Details/Components/toggle.dart';
 import 'package:schaffen_task/Provider/restro.dart';
-import 'package:provider/provider.dart';
-import 'package:schaffen_task/Models/restaurant_model.dart';
 
 
 class Body extends StatefulWidget {
@@ -51,6 +48,7 @@ class _OrderNowViewState extends State<_OrderNowView> {
 
   @override
   Widget build(BuildContext context) {
+    var provider = Provider.of<Restro>(context, listen: false);
     final _counter = Provider.of<CounterModel>(context);
     return SingleChildScrollView(
       child: Column(
@@ -62,33 +60,34 @@ class _OrderNowViewState extends State<_OrderNowView> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Text(
-                  'Namma Veedu Vasanta Bhavan',
-                  style: Theme
-                      .of(context)
+                  provider.restro!.r_name,
+                  style: Theme.of(context)
                       .textTheme
                       .subtitle2!
                       .copyWith(fontWeight: FontWeight.bold, fontSize: 16.0),
                 ),
                 UIHelper.verticalSpaceSmall(),
-                Text('South Indian',
-                    style: Theme
-                        .of(context)
-                        .textTheme
-                        .bodyText1),
+
                 UIHelper.verticalSpaceExtraSmall(),
-                Text('Velachery Main Road, Madipakkam',
-                    style: Theme
-                        .of(context)
-                        .textTheme
-                        .bodyText1),
+                Text(provider.restro!.r_addr,
+                    style: Theme.of(context).textTheme.bodyText1),
                 UIHelper.verticalSpaceMedium(),
                 const CustomDividerView(dividerHeight: 1.0),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
-                    buildVerticalStack(context, '4.1', 'Packaging 80%'),
-                    buildVerticalStack(context, '29 mins', 'Delivery Time'),
-                    buildVerticalStack(context, 'Rs150', 'For Two'),
+                    buildVerticalStack(
+                        context,
+                        provider.restro!.r_rating.toString(),
+                        'Packaging ${(provider.restro!.r_rating * 100 / 5).toStringAsFixed(0)}%'),
+                    buildVerticalStack(
+                        context,
+                        '${(provider.restro!.r_rating * 100 / 12).toStringAsFixed(0)} mins',
+                        'Delivery Time'),
+                    buildVerticalStack(
+                        context,
+                        'Rs${(provider.restro!.r_rating * 100 / 2).toStringAsFixed(0)}',
+                        'For Two'),
                   ],
                 ),
                 const CustomDividerView(dividerHeight: 1.0),
@@ -127,18 +126,17 @@ class _OrderNowViewState extends State<_OrderNowView> {
                         children: [
                           Text(
                             _counter.isVeg ? 'PURE VEG' : 'NON VEG',
-                            style: Theme
-                                .of(context)
+                            style: Theme.of(context)
                                 .textTheme
                                 .subtitle2!
                                 .copyWith(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 16.0),
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 16.0),
                           ),
-                          SizedBox(width: getProportionateScreenWidth(170),),
-                          AnimatedSwitch(
-
+                          SizedBox(
+                            width: getProportionateScreenWidth(170),
                           ),
+                          AnimatedSwitch(),
                         ],
                       )
                     ],
@@ -151,9 +149,8 @@ class _OrderNowViewState extends State<_OrderNowView> {
           Padding(
             padding: const EdgeInsets.all(10.0),
             child: Text(
-              'Recommended',
-              style: Theme
-                  .of(context)
+              'Items',
+              style: Theme.of(context)
                   .textTheme
                   .subtitle2!
                   .copyWith(fontSize: 18.0),
@@ -161,27 +158,23 @@ class _OrderNowViewState extends State<_OrderNowView> {
           ),
           const RecommendedFoodView(),
           const CustomDividerView(dividerHeight: 15.0),
-          FoodListView(
-            title: 'Breakfast',
-            foods: _counter.isVeg ? RestaurantDetail.getBreakfast() : null,
-          ),
-          const CustomDividerView(dividerHeight: 15.0),
-          FoodListView(
-            title: 'All Time Favourite',
-            foods: _counter.isVeg
-                ? RestaurantDetail.getAllTimeFavFoods()
-                : null,
-          ),
-          const CustomDividerView(dividerHeight: 15.0),
-          FoodListView(
-            title: 'Kozhukattaiyum & Paniyarams',
-            foods: _counter.isVeg ? RestaurantDetail.getOtherDishes() : null,
-          )
+          // FoodListView(
+          //   title: 'Breakfast',
+          //   foods: _counter.isVeg ? RestaurantDetail.getBreakfast() : null,
+          // ),
+          // const CustomDividerView(dividerHeight: 15.0),
+          // FoodListView(
+          //   title: 'All Time Favourite',
+          //   foods:
+          //       _counter.isVeg ? RestaurantDetail.getAllTimeFavFoods() : null,
+          // ),
+          // const CustomDividerView(dividerHeight: 15.0),
+          // FoodListView(
+          //   title: 'Kozhukattaiyum & Paniyarams',
+          //   foods: _counter.isVeg ? RestaurantDetail.getOtherDishes() : null,
+          // )
         ],
       ),
     );
   }
-
 }
-
-
