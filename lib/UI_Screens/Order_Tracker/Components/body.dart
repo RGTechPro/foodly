@@ -1,7 +1,9 @@
-
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:schaffen_task/Components/button.dart';
 import 'package:schaffen_task/Constants/ui.dart';
+import 'package:schaffen_task/Provider/provider.dart';
+import 'package:schaffen_task/UI_Screens/Order_Tracker/Components/order_summary.dart';
 import 'package:timeline_tile/timeline_tile.dart';
 
 class Body extends StatefulWidget {
@@ -26,6 +28,7 @@ class _BodyState extends State<Body> {
 
   @override
   Widget build(BuildContext context) {
+    final _counter = Provider.of<CounterModel>(context);
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.black,
@@ -206,36 +209,47 @@ class _BodyState extends State<Body> {
                 Center(
                   child: SizedBox(
                     height: 50,
-                    child:CustomRaisedButton(
-                      shadowColor: Colors.amber,
-                      backcolor: Colors.black,
-                      text: 'Order Summary',
-                      pressed: visibility,
-                      radius: 20,
-                      padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-                    ),
+                    child: ElevatedButton(
 
+                      onPressed: (){
+                        setState(() {
+                          OrderSummaryVisible = !OrderSummaryVisible;
+                        });
+                      },
+
+
+                      style: ButtonStyle(
+                        padding: MaterialStateProperty.all(EdgeInsets.fromLTRB(20, 0, 20, 0)),
+                        shadowColor: MaterialStateProperty.all(Colors.amber),
+                        backgroundColor: MaterialStateProperty.all(Colors.black),
+                        shape: MaterialStateProperty.all(
+                          RoundedRectangleBorder(borderRadius: BorderRadius.circular(20),),),
+                      ),
+                      child:  Text(
+                        'Order Summary',
+                        style: TextStyle(
+                          color: Colors.amber,
+                          fontSize: 25,
+                        ),
+                      ),
+                    ),
                   ),
                 ),
                 const SizedBox(
                   height: 30,
                 ),
                 Visibility(
-                    visible: OrderSummaryVisible,
-                    child: const Center(
-                        child: Text(
-                      "Order Summary",
-                      style: TextStyle(color: Colors.black),
-                    ))),
+                  visible: OrderSummaryVisible,
+                  child:  Center(
+                    child: BillDetailView(deliverFee: 35,taxes: 12,total: _counter.totalSum.toDouble(),),
+                  ),
+                ),
               ],
             ),
           ),
         ));
   }
-  void visibility()
-  {
-    setState(() {
-      OrderSummaryVisible = !OrderSummaryVisible;
-    });
-  }
+
+
+
 }
