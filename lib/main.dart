@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:schaffen_task/Provider/account.dart';
 import 'package:schaffen_task/Provider/provider.dart';
 import 'package:schaffen_task/Routes/routes.dart';
 import 'package:schaffen_task/Services/auth_services.dart';
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (context)=>Auth()),
+        ChangeNotifierProvider(create: (context)=>Account()),
        ChangeNotifierProvider.value(
         value:CounterModel(),
        
