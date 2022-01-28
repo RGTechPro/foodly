@@ -20,7 +20,7 @@ class AddressCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(10),
+      margin: const EdgeInsets.all(10),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
@@ -31,7 +31,7 @@ class AddressCard extends StatelessWidget {
               borderRadius: BorderRadius.circular(15),
             ),
             child: Container(
-              margin: EdgeInsets.all(10),
+              margin: const EdgeInsets.all(10),
               width: getProportionateScreenWidth(SizeConfig.screenWidth! / 1.2),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,

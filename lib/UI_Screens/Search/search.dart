@@ -9,7 +9,7 @@ class Search extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
-    return Scaffold(
+    return const Scaffold(
 
       body: SearchScreen(),
       bottomNavigationBar: BottomNavigation(),

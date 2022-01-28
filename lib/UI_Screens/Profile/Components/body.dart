@@ -2,12 +2,10 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
 import 'package:schaffen_task/Constants/size_config.dart';
 import 'package:schaffen_task/Provider/account.dart';
 import 'package:schaffen_task/Services/auth_services.dart';
 import 'package:schaffen_task/UI_Screens/Deliver-Address/Components/previous_address.dart';
-import 'package:schaffen_task/UI_Screens/Deliver-Address/address.dart';
 import 'package:schaffen_task/UI_Screens/MyOrders/my_orders.dart';
 import 'package:schaffen_task/UI_Screens/Profile/Components/profile_item.dart';
 import 'package:schaffen_task/UI_Screens/log_in.dart';
@@ -15,7 +13,9 @@ import 'package:schaffen_task/UI_Screens/log_in.dart';
 class Body extends StatelessWidget {
   static String routeName = "/profile";
   final _firebase = FirebaseFirestore.instance;
-  User? _firebaseUser = FirebaseAuth.instance.currentUser;
+  final User? _firebaseUser = FirebaseAuth.instance.currentUser;
+
+  Body({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     var accountProvider = Provider.of<Account>(context, listen: false);
@@ -27,14 +27,14 @@ class Body extends StatelessWidget {
                   _firebase.collection('users').doc(_firebaseUser!.uid).get(),
               builder: (context, snapshot) {
                 if (snapshot.hasError) {
-                  return Center(
+                  return const Center(
                       child: Text(
                     'Something went wrong',
                   ));
                 }
 
                 if (snapshot.hasData && !snapshot.data!.exists) {
-                  return Text("Error");
+                  return const Text("Error");
                 }
                 if (snapshot.connectionState == ConnectionState.done) {
                      accountProvider.setName(snapshot.data!['name']);
@@ -56,30 +56,30 @@ class Body extends StatelessWidget {
                         (accountProvider.getName() != null)
                             ? accountProvider.getName()!
                             : 'Name Unknown',
-                        style: TextStyle(
+                        style: const TextStyle(
                             fontSize: 30, fontWeight: FontWeight.bold),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
                       Text(
                         (accountProvider.getEmail() != null)
                             ? accountProvider.getEmail()!
                             : 'E-mail Unknown',
-                        style: TextStyle(fontSize: 20),
+                        style: const TextStyle(fontSize: 20),
                       ),
                       Text(
                         (accountProvider.getMobile() != null)
                             ? accountProvider.getMobile()!
                             : 'Mobile no Unknown',
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 20,
                         ),
                       ),
                     ],
                   );
                 }
-                return Center(
+                return const Center(
                   child: CircularProgressIndicator(
                     color: Colors.red,
                   ),
@@ -97,7 +97,7 @@ class Body extends StatelessWidget {
                     onTap: () {
                       Navigator.pushNamed(context, MyOrders.routeName);
                     },
-                    child: p_card_w(
+                    child: ProfileCard(
                         namee: "My Orders",
                         icons: Icons.add_shopping_cart,
                         route: "/my_order")),
@@ -108,7 +108,7 @@ class Body extends StatelessWidget {
                     onTap: () {
                       Navigator.pushNamed(context, PreviousAddress.routeName);
                     },
-                    child: p_card_w(
+                    child: ProfileCard(
                         namee: "My Addesses",
                         icons: Icons.add_shopping_cart,
                         route: "test")),
@@ -117,7 +117,7 @@ class Body extends StatelessWidget {
                 ),
                 InkWell(
                     onTap: () {},
-                    child: p_card_w(
+                    child: ProfileCard(
                         namee: "Help",
                         icons: Icons.add_shopping_cart,
                         route: "test")),
@@ -130,9 +130,9 @@ class Body extends StatelessWidget {
                       Provider.of<Account>(context, listen: false).logout();
                       Navigator.of(context).popUntil((route) => route.isFirst);
                       Navigator.pushReplacement(context,
-                          MaterialPageRoute(builder: (context) => LogIn()));
+                          MaterialPageRoute(builder: (context) => const LogIn()));
                     },
-                    child: p_card_w(
+                    child: ProfileCard(
                         namee: "Logout",
                         icons: Icons.add_shopping_cart,
                         route: "test")),

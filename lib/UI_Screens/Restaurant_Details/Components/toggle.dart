@@ -5,7 +5,7 @@ import 'package:schaffen_task/Provider/provider.dart';
 class AnimatedSwitch extends StatefulWidget {
 
 
-  AnimatedSwitch({Key? key}) : super(key: key);
+  const AnimatedSwitch({Key? key}) : super(key: key);
   @override
   _AnimatedSwitchState createState() => _AnimatedSwitchState();
 }
@@ -13,7 +13,7 @@ class AnimatedSwitch extends StatefulWidget {
 class _AnimatedSwitchState extends State<AnimatedSwitch>
     with SingleTickerProviderStateMixin {
 
-  Duration _duration = const Duration(milliseconds: 370);
+  final Duration _duration = const Duration(milliseconds: 370);
   Animation<Alignment>? _animation;
   AnimationController? _animationController;
   @override
@@ -64,7 +64,7 @@ class _AnimatedSwitchState extends State<AnimatedSwitch>
               decoration: BoxDecoration(
                   color: _counter.isVeg ? Colors.green : Colors.red,
                   borderRadius: const BorderRadius.all(
-                    const Radius.circular(40),
+                    Radius.circular(40),
                   ),
                   boxShadow: [
                     BoxShadow(

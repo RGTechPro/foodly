@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:schaffen_task/Components/button.dart';
 import 'package:schaffen_task/Constants/size_config.dart';
-import 'package:schaffen_task/UI_Screens/Catalogue-Screen/catalogue.dart';
-
 import 'Components/body.dart';
 
 class Profile extends StatelessWidget {

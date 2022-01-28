@@ -45,7 +45,7 @@ class _CartCardState extends State<CartCard> {
           ),
         ),
         const SizedBox(width: 20),
-        Container(
+        SizedBox(
           width: getProportionateScreenWidth(80),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -63,7 +63,7 @@ class _CartCardState extends State<CartCard> {
                       fontWeight: FontWeight.w700, color: Colors.orange),
                   children: [
                     TextSpan(
-                        text: "  x ${order}",
+                        text: "  x $order",
                         style: Theme.of(context).textTheme.bodyText1),
                   ],
                 ),
