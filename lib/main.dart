@@ -3,10 +3,12 @@ import 'package:provider/provider.dart';
 import 'package:schaffen_task/Provider/provider.dart';
 import 'package:schaffen_task/Routes/routes.dart';
 import 'package:schaffen_task/Themes/themes.dart';
-
+import 'package:firebase_core/firebase_core.dart';
 import 'UI_Screens/log_in.dart';
 
-void main() {
+void main()async {
+    WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
