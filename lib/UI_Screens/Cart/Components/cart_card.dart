@@ -47,7 +47,7 @@ class _CartCardState extends State<CartCard> {
         ),
         const SizedBox(width: 20),
         SizedBox(
-          width: getProportionateScreenWidth(80),
+          width: getProportionateScreenWidth(120),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -98,7 +98,7 @@ class _CartCardState extends State<CartCard> {
           ),
         ),
         SizedBox(
-          width: getProportionateScreenWidth(80)!,
+          width: getProportionateScreenWidth(50)!,
         ),
         Column(
           crossAxisAlignment: CrossAxisAlignment.end,

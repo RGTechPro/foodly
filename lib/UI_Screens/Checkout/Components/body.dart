@@ -75,8 +75,14 @@ class _OrderViewState extends State<_OrderView> {
                   Text(provider.restroData!.r_name,
                       style: Theme.of(context).textTheme.subtitle2),
                   UIHelper.verticalSpaceExtraSmall(),
-                  Text(provider.restroData!.r_addr,
-                      style: Theme.of(context).textTheme.bodyText1)
+                  Container(
+                    width: getProportionateScreenWidth(200),
+                    child: Text(provider.restroData!.r_addr,
+                        style: Theme.of(context).textTheme.bodyText1,
+                      overflow: TextOverflow.ellipsis,
+                      maxLines: 2,
+                    ),
+                  )
                 ],
               )
             ],
