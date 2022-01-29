@@ -44,9 +44,7 @@ class _CompleteProfileFormState extends State<CompleteProfileForm> {
   // List of items in our dropdown menu
   List<String> items = [
     'Mumbai',
-    'Chennai',
-    'Lucknow',
-    'Kolkata',
+   'Bangalore'
     'Delhi',
   ];
   @override
