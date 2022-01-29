@@ -8,7 +8,7 @@ import 'package:schaffen_task/Provider/address_data.dart';
 import '../snackbar.dart';
 
 Future? addAddress(BuildContext context, String name, String address,
-    String mobileNumber, bool isEdit, String city) {
+    String mobileNumber, String city) {
   User? user = FirebaseAuth.instance.currentUser;
   var addressProvider = Provider.of<AddressData>(context, listen: false);
   final _firebase = FirebaseFirestore.instance;

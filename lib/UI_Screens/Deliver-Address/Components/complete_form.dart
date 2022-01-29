@@ -5,8 +5,10 @@ import 'package:schaffen_task/Components/form_error.dart';
 import 'package:schaffen_task/Components/suffix_icon.dart';
 import 'package:schaffen_task/Constants/constants.dart';
 import 'package:schaffen_task/Constants/size_config.dart';
+import 'package:schaffen_task/Services/firestore/add_address.dart';
 import 'package:schaffen_task/UI_Screens/Catalogue-Screen/catalogue.dart';
-
+import 'package:schaffen_task/UI_Screens/Deliver-Address/Components/previous_address.dart';
+import 'package:schaffen_task/UI_Screens/Deliver-Address/address.dart';
 
 class CompleteProfileForm extends StatefulWidget {
   const CompleteProfileForm({Key? key}) : super(key: key);
@@ -44,7 +46,7 @@ class _CompleteProfileFormState extends State<CompleteProfileForm> {
   // List of items in our dropdown menu
   List<String> items = [
     'Mumbai',
-   'Bangalore'
+    'Bangalore',
     'Delhi',
   ];
   @override
@@ -66,9 +68,11 @@ class _CompleteProfileFormState extends State<CompleteProfileForm> {
           SizedBox(height: getProportionateScreenHeight(40)),
           DefaultButton(
             text: "Save",
-            press: () {
+            press: () async {
               if (_formKey.currentState!.validate()) {
-                Navigator.pushNamed(context, CatalogueScreen.routeName);
+                await addAddress(context, '$firstName $lastName', address!,
+                    phoneNumber!, dropdownvalue!);
+                Navigator.pushNamed(context, PreviousAddress.routeName);
               }
             },
           ),
@@ -76,34 +80,35 @@ class _CompleteProfileFormState extends State<CompleteProfileForm> {
       ),
     );
   }
-   Container cityMenu()
-   {
-     return Container(
-       decoration: BoxDecoration(
-         border: Border.all(
-           color: Colors.black,
-         ),
-         borderRadius: BorderRadius.circular(30),
-       ),
-       child: Row(
-         mainAxisAlignment: MainAxisAlignment.spaceAround,
-         children: [
-           CustomText(
-             text: 'City',
-             fontWeight: FontWeight.w500,
-             fontSize: 22,
-           ),
-           dropdown(),
-         ],
-       ),
-     );
-   }
+
+  Container cityMenu() {
+    return Container(
+      decoration: BoxDecoration(
+        border: Border.all(
+          color: Colors.black,
+        ),
+        borderRadius: BorderRadius.circular(30),
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          CustomText(
+            text: 'City',
+            fontWeight: FontWeight.w500,
+            fontSize: 22,
+          ),
+          dropdown(),
+        ],
+      ),
+    );
+  }
 
   TextFormField buildAddressFormField() {
     return TextFormField(
       onSaved: (newValue) => address = newValue,
       onChanged: (value) {
         if (value.isNotEmpty) {
+          address = value;
           removeError(error: kAddressNullError);
         }
         return;
@@ -136,6 +141,7 @@ class _CompleteProfileFormState extends State<CompleteProfileForm> {
       onSaved: (newValue) => phoneNumber = newValue,
       onChanged: (value) {
         if (value.isNotEmpty) {
+          phoneNumber = value;
           removeError(error: kPhoneNumberNullError);
         }
         return;
@@ -163,6 +169,11 @@ class _CompleteProfileFormState extends State<CompleteProfileForm> {
 
   TextFormField buildLastNameFormField() {
     return TextFormField(
+      onChanged: (value) {
+        if (value.isNotEmpty) {
+          lastName = value;
+        }
+      },
       onSaved: (newValue) => lastName = newValue,
       decoration: InputDecoration(
         labelText: "Last Name",
@@ -185,6 +196,7 @@ class _CompleteProfileFormState extends State<CompleteProfileForm> {
       onSaved: (newValue) => firstName = newValue,
       onChanged: (value) {
         if (value.isNotEmpty) {
+          firstName = value;
           removeError(error: kNamelNullError);
         }
         return;

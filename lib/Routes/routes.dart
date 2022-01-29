@@ -23,6 +23,6 @@ final Map<String, WidgetBuilder> routes = {
   Search.routeName: (context) => const Search(),
   RestaurantDetails.routeName: (context) => const RestaurantDetails(),
   DeliAddress.routeName:(context)=>const DeliAddress(),
-  PreviousAddress.routeName:(context)=>const PreviousAddress(),
+  PreviousAddress.routeName:(context)=>PreviousAddress(),
   MyOrders.routeName:(context)=>const MyOrders(),
 };

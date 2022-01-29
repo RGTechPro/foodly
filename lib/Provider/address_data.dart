@@ -2,11 +2,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:schaffen_task/Models/address.dart';
 
-
 class AddressData extends ChangeNotifier {
   int selectedIndex = 0;
   bool isAddress = true;
   List<Address> addressList = [];
+  Address? selected;
   // Address edit = Address(name: '', address: '', mobileNumber: '', city: '');
   // void changeColor(int index) {
   //   int i;
@@ -29,6 +29,5 @@ class AddressData extends ChangeNotifier {
   //   }
   //   return 0;
   // }
-
 
 }
