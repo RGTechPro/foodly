@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:schaffen_task/Components/bottom_navigation.dart';
 import 'package:schaffen_task/Components/button.dart';
 import 'package:schaffen_task/Constants/ui.dart';
 import 'package:schaffen_task/Provider/cart.dart';
@@ -32,6 +33,7 @@ class _BodyState extends State<Body> {
     final _counter = Provider.of<CounterModel>(context);
     var provider = Provider.of<Cart>(context);
     return Scaffold(
+      bottomNavigationBar: BottomNavigation(),
         appBar: AppBar(
           backgroundColor: Colors.black,
           centerTitle: true,

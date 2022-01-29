@@ -27,7 +27,7 @@ class _LogInState extends State<LogIn> {
               'FOODLY',
               style: TextStyle(
                   fontSize: 55,
-                  color: Colors.brown,
+                  color: Colors.orange,
                   fontWeight: FontWeight.bold),
             ),
             const SizedBox(
@@ -37,41 +37,46 @@ class _LogInState extends State<LogIn> {
               height: SizeConfig.screenHeight! * 0.08,
               width: SizeConfig.screenWidth! * 0.6,
               child: !Provider.of<Auth>(context, listen: false).isLoading
-        ? SignInButton(
-                Buttons.GoogleDark,
-                onPressed: ()async {
-
-  try {
-                UserCredential googleUserCred =
-                    await Provider.of<Auth>(context, listen: false)
-                        .signInWithGoogle();
-                Provider.of<Auth>(context, listen: false)
-                    .setUser(googleUserCred.user);
-                Provider.of<Auth>(context, listen: false).addUser();
-                if (Provider.of<Auth>(context, listen: false).getUser() !=
-                    null) {
-                  Navigator.of(context).popUntil((route) => route.isFirst);
-          Navigator.pushNamed(
-                    context,
-                    CatalogueScreen.routeName,
-                  );
-                  final snackBar = const SnackBar(content: Text('Logged In!'));
-                  ScaffoldMessenger.of(context).showSnackBar(snackBar);
-                }
-                setState(() {
-                  Provider.of<Auth>(context, listen: false).isLoading = false;
-                });
-              } catch (e) {
-                setState(() {
-                  Provider.of<Auth>(context, listen: false).isLoading = false;
-                });
-                ;
-              }
-                  
-                },
-              ): const CircularProgressIndicator(
-            color: Colors.redAccent,
-          ),
+                  ? SignInButton(
+                      Buttons.GoogleDark,
+                      onPressed: () async {
+                        try {
+                          UserCredential googleUserCred =
+                              await Provider.of<Auth>(context, listen: false)
+                                  .signInWithGoogle();
+                          Provider.of<Auth>(context, listen: false)
+                              .setUser(googleUserCred.user);
+                          Provider.of<Auth>(context, listen: false).addUser();
+                          if (Provider.of<Auth>(context, listen: false)
+                                  .getUser() !=
+                              null) {
+                            Navigator.of(context)
+                                .popUntil((route) => route.isFirst);
+                            Navigator.pushNamed(
+                              context,
+                              CatalogueScreen.routeName,
+                            );
+                            final snackBar =
+                                const SnackBar(content: Text('Logged In!'));
+                            ScaffoldMessenger.of(context)
+                                .showSnackBar(snackBar);
+                          }
+                          setState(() {
+                            Provider.of<Auth>(context, listen: false)
+                                .isLoading = false;
+                          });
+                        } catch (e) {
+                          setState(() {
+                            Provider.of<Auth>(context, listen: false)
+                                .isLoading = false;
+                          });
+                          ;
+                        }
+                      },
+                    )
+                  : const CircularProgressIndicator(
+                      color: Colors.redAccent,
+                    ),
             )
           ],
         ),

@@ -9,26 +9,7 @@
       <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/UI_Screens/Cart/Components/body.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/UI_Screens/Cart/Components/body.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/UI_Screens/Cart/Components/cart_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/UI_Screens/Cart/Components/cart_card.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/UI_Screens/Cart/Components/checkout_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/UI_Screens/Cart/Components/checkout_card.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/UI_Screens/Cart/cart.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/UI_Screens/Cart/cart.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/UI_Screens/Checkout/Components/body.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/UI_Screens/Checkout/Components/body.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/UI_Screens/Checkout/Components/checkout_sumary_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/UI_Screens/Checkout/Components/checkout_sumary_card.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/UI_Screens/Checkout/Components/delivery_address.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/UI_Screens/Checkout/Components/delivery_address.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/UI_Screens/Checkout/Components/food_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/UI_Screens/Checkout/Components/food_card.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/UI_Screens/Checkout/checkout.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/UI_Screens/Checkout/checkout.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/UI_Screens/Deliver-Address/Components/address_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/UI_Screens/Deliver-Address/Components/address_card.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/UI_Screens/Deliver-Address/Components/complete_form.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/UI_Screens/Deliver-Address/Components/complete_form.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/UI_Screens/MyOrders/my_orders.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/UI_Screens/MyOrders/my_orders.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/UI_Screens/Order_Tracker/Components/body.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/UI_Screens/Order_Tracker/Components/body.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/UI_Screens/Profile/Components/body.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/UI_Screens/Profile/Components/body.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/UI_Screens/Profile/Components/profile_item.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/UI_Screens/Profile/Components/profile_item.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/UI_Screens/Profile/profile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/UI_Screens/Profile/profile.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/UI_Screens/Restaurant_Details/Components/body.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/UI_Screens/Restaurant_Details/Components/body.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/UI_Screens/Restaurant_Details/Components/toggle.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/UI_Screens/Restaurant_Details/Components/toggle.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/UI_Screens/Restaurant_Details/restaurant_detail.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/UI_Screens/Restaurant_Details/restaurant_detail.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/UI_Screens/Search/search.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/UI_Screens/Search/search.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/UI_Screens/log_in.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/UI_Screens/log_in.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,7 +17,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\modis\.android\avd\13.5_Freeform_API_30.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[TSAEWKG6WOONTGQG]" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
