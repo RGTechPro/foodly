@@ -93,6 +93,7 @@ class _OrderViewState extends State<_OrderView> {
                     isVeg: true,
                     food: provider.cartList[index].i_name,
                     price: provider.cartList[index].i_price,
+                    itemCount:provider.cartList[index].itemcount
                   ),
                 );
               }),

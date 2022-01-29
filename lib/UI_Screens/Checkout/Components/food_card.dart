@@ -7,10 +7,12 @@ import 'package:schaffen_task/Models/cart_models.dart';
 import 'package:provider/provider.dart';
 
 class FoodCard extends StatefulWidget {
-  FoodCard({Key? key, this.isVeg, this.price, this.food}) : super(key: key);
+  FoodCard({Key? key, this.isVeg, this.price, this.food, this.itemCount = 1})
+      : super(key: key);
   double? price;
   String? food;
   bool? isVeg;
+  int itemCount;
   @override
   State<FoodCard> createState() => _FoodCardState();
 }
@@ -59,7 +61,7 @@ class _FoodCardState extends State<FoodCard> {
                 },
               ),
               const Spacer(),
-              Text('$order',
+              Text('${widget.itemCount}',
                   style: Theme.of(context)
                       .textTheme
                       .subtitle2!
@@ -77,7 +79,7 @@ class _FoodCardState extends State<FoodCard> {
         ),
         UIHelper.horizontalSpaceSmall(),
         Text(
-          '${order * widget.price!}',
+          '${widget.itemCount * widget.price!}',
           style: Theme.of(context).textTheme.bodyText1,
         ),
       ],
@@ -87,12 +89,14 @@ class _FoodCardState extends State<FoodCard> {
   void increment({int? price}) {
     setState(() {
       order++;
+      widget.itemCount++;
     });
   }
 
   void decrement({int? price}) {
     setState(() {
       order--;
+      widget.itemCount--;
     });
   }
 }
