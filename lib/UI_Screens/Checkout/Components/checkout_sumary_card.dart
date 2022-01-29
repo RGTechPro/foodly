@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:schaffen_task/Components/custom_text.dart';
 import 'package:schaffen_task/Constants/size_config.dart';
 import 'package:schaffen_task/Models/cart_models.dart';
+import 'package:schaffen_task/Models/product_data.dart';
 import 'package:schaffen_task/Provider/provider.dart';
 
 class CheckoutSummaryCard extends StatefulWidget {
@@ -11,7 +12,7 @@ class CheckoutSummaryCard extends StatefulWidget {
     this.cart,
   }) : super(key: key);
 
-  final CartModel? cart;
+  final ProductData? cart;
 
   @override
   State<CheckoutSummaryCard> createState() => _CheckoutSummaryCardState();
@@ -41,7 +42,7 @@ class _CheckoutSummaryCardState extends State<CheckoutSummaryCard> {
                   child: ClipRRect(
                       borderRadius: BorderRadius.circular(10),
                       child: Image.network(
-                        widget.cart!.foodImg!,
+                        widget.cart!.i_image,
                         fit: BoxFit.fill,
                       )),
                 ),
@@ -61,7 +62,7 @@ class _CheckoutSummaryCardState extends State<CheckoutSummaryCard> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                widget.cart!.title!,
+                widget.cart!.i_name,
                 style: TextStyle(
                     color: Colors.red,
                     fontSize: getProportionateScreenWidth(22)!,
@@ -77,7 +78,7 @@ class _CheckoutSummaryCardState extends State<CheckoutSummaryCard> {
                     onTap: () {
                       order > 0 ? decrement() : null;
                       _counter.totalSum >= 0 && order >= 0
-                          ? _counter.decrement(price: widget.cart!.price!)
+                          ? _counter.decrement(price: widget.cart!.i_price)
                           : null;
                       _counter.totalSum < 0 ? _counter.zero() : null;
                     },
@@ -105,8 +106,8 @@ class _CheckoutSummaryCardState extends State<CheckoutSummaryCard> {
                   const SizedBox(width: 8,),
                   InkWell(
                     onTap: () {
-                      increment(price: widget.cart!.price);
-                      _counter.increment(price: widget.cart!.price!);
+                      increment(price: widget.cart!.i_price);
+                      _counter.increment(price: widget.cart!.i_price);
                     },
                     child: Container(
                         decoration: BoxDecoration(
@@ -126,7 +127,7 @@ class _CheckoutSummaryCardState extends State<CheckoutSummaryCard> {
           width: getProportionateScreenWidth(50)!,
         ),
         CustomText(
-          text: 'Rs ${(widget.cart!.price!*order).toString()}',
+          text: 'Rs ${(widget.cart!.i_price*order).toString()}',
           fontSize: 18,
           fontWeight: FontWeight.bold,
           color: Colors.blue
@@ -135,13 +136,13 @@ class _CheckoutSummaryCardState extends State<CheckoutSummaryCard> {
     );
   }
 
-  void increment({int? price}) {
+  void increment({double? price}) {
     setState(() {
       order++;
     });
   }
 
-  void decrement({int? price}) {
+  void decrement({double? price}) {
     setState(() {
       order--;
     });

@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:schaffen_task/Components/rating.dart';
 import 'package:schaffen_task/Constants/ui.dart';
 import 'package:schaffen_task/Models/restaurant_detail.dart';
+import 'package:schaffen_task/Provider/cart.dart';
 import 'package:schaffen_task/Provider/provider.dart';
 import 'package:schaffen_task/UI_Screens/Restaurant_Details/Components/add_button.dart';
 import 'package:schaffen_task/UI_Screens/Restaurant_Details/Components/veg_portion.dart';
@@ -104,7 +105,15 @@ class _RecommendedFoodViewState extends State<RecommendedFoodView> {
                           InkWell(
                               onTap: () {
                                 setState(() {
-                                  isAdd = !isAdd!;
+                                  Provider.of<Cart>(context,listen: false).restroData =
+                                      provider.restro;
+                                  Provider.of<Cart>(context,listen: false).cartList.add(
+                                      _counter.isVeg
+                                          ? provider.restro!.veg[index]
+                                          : provider.restro!.non_veg[index]);
+                                final snackBar = const SnackBar(content: Text('Item Added to Cart!'));
+                  ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                                //  isAdd = !isAdd!;
                                 });
                               },
                               child: AddBtnView(

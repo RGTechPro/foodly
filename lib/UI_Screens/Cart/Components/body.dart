@@ -1,8 +1,10 @@
 
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import 'package:schaffen_task/Constants/size_config.dart';
 import 'package:schaffen_task/Models/cart_models.dart';
+import 'package:schaffen_task/Provider/cart.dart';
 
 import 'cart_card.dart';
 
@@ -16,15 +18,16 @@ class Body extends StatefulWidget {
 class _BodyState extends State<Body> {
   @override
   Widget build(BuildContext context) {
+        var provider = Provider.of<Cart>(context);
     return Padding(
       padding: EdgeInsets.symmetric(
         horizontal: getProportionateScreenWidth(20)!,
       ),
       child: ListView.builder(
-        itemCount: demoCarts!.length,
+        itemCount: provider.cartList.length,
         itemBuilder: (context, index) =>  Padding(
           padding: const EdgeInsets.symmetric(vertical: 10),
-          child:CartCard(cart: demoCarts![index],),
+          child:CartCard(cart: provider.cartList[index],),
           // Dismissible(
           //   key: Key(demoCarts[index].product.id.toString()),
           //   direction: DismissDirection.endToStart,

@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 
 
 class CounterModel with ChangeNotifier {
-  int _totalSum = 0;
+  double _totalSum = 0;
  bool _isVeg=true;
-  int get totalSum => _totalSum;
+  double get totalSum => _totalSum;
   bool get isVeg=>_isVeg;
 
   void zero()
@@ -13,11 +13,11 @@ class CounterModel with ChangeNotifier {
     _totalSum=0;
     notifyListeners();
   }
-  void increment({int?price}) {
+  void increment({double?price}) {
     _totalSum+=price!;
     notifyListeners();
   }
-  void decrement({int?price}) {
+  void decrement({double?price}) {
     _totalSum-=price!;
     notifyListeners();
   }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:schaffen_task/Constants/size_config.dart';
 import 'package:schaffen_task/Models/cart_models.dart';
+import 'package:schaffen_task/Models/product_data.dart';
 import 'package:schaffen_task/Provider/provider.dart';
 
 class CartCard extends StatefulWidget {
@@ -10,14 +11,14 @@ class CartCard extends StatefulWidget {
     this.cart,
   }) : super(key: key);
 
-  final CartModel? cart;
+  final ProductData? cart;
 
   @override
   State<CartCard> createState() => _CartCardState();
 }
 
 class _CartCardState extends State<CartCard> {
-  int order=0;
+  int order = 0;
   @override
   Widget build(BuildContext context) {
     final _counter = Provider.of<CounterModel>(context);
@@ -38,7 +39,7 @@ class _CartCardState extends State<CartCard> {
               child: ClipRRect(
                   borderRadius: BorderRadius.circular(10),
                   child: Image.network(
-                    widget.cart!.foodImg!,
+                    widget.cart!.i_image,
                     fit: BoxFit.fill,
                   )),
             ),
@@ -51,14 +52,17 @@ class _CartCardState extends State<CartCard> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                widget.cart!.title!,
-                style:  TextStyle(color: Colors.black, fontSize: getProportionateScreenWidth(18)!,fontWeight: FontWeight.bold),
-                maxLines: 2,
+                widget.cart!.i_name,
+                style: TextStyle(
+                    color: Colors.black,
+                    fontSize: getProportionateScreenWidth(18)!,
+                    fontWeight: FontWeight.bold),
+                maxLines: 3,
               ),
               const SizedBox(height: 10),
               Text.rich(
                 TextSpan(
-                  text: "Rs ${widget.cart!.price}",
+                  text: "Rs ${widget.cart!.i_price}",
                   style: const TextStyle(
                       fontWeight: FontWeight.w700, color: Colors.orange),
                   children: [
@@ -81,7 +85,7 @@ class _CartCardState extends State<CartCard> {
                       width: getProportionateScreenWidth(10),
                     ),
                     Text(
-                      '${widget.cart!.votes!}',
+                      '${widget.cart!.i_votes}',
                       style: const TextStyle(
                         color: Colors.redAccent,
                         fontWeight: FontWeight.w700,
@@ -101,9 +105,9 @@ class _CartCardState extends State<CartCard> {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             InkWell(
-              onTap: (){
-                increment(price: widget.cart!.price);
-                _counter.increment(price:widget.cart!.price!);
+              onTap: () {
+                increment(price: widget.cart!.i_price);
+                _counter.increment(price: widget.cart!.i_price);
               },
               child: Container(
                   decoration: BoxDecoration(
@@ -129,11 +133,12 @@ class _CartCardState extends State<CartCard> {
               ],
             ),
             InkWell(
-              onTap: ()
-              {
-                order>0?decrement(): null;
-                _counter.totalSum>=0&&order>=0?_counter.decrement(price: widget.cart!.price!):null;
-                _counter.totalSum<0?_counter.zero():null;
+              onTap: () {
+                order > 0 ? decrement() : null;
+                _counter.totalSum >= 0 && order >= 0
+                    ? _counter.decrement(price: widget.cart!.i_price)
+                    : null;
+                _counter.totalSum < 0 ? _counter.zero() : null;
               },
               child: Container(
                   decoration: BoxDecoration(
@@ -150,20 +155,15 @@ class _CartCardState extends State<CartCard> {
     );
   }
 
-  void increment({int? price})
-  {
+  void increment({double? price}) {
     setState(() {
       order++;
-
     });
-
   }
-  void decrement({int? price})
-  {
+
+  void decrement({double? price}) {
     setState(() {
-  order--;
-
+      order--;
     });
-
   }
 }
