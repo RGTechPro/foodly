@@ -14,6 +14,22 @@
       },
       "oauth_client": [
         {
+          "client_id": "672613658818-eguh1rjmdc0b2da5mrfase8qkkb8i1uj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.restro.foodly",
+            "certificate_hash": "7ba0925b6b8ed8286dc77bd1a855d631998a6f54"
+          }
+        },
+        {
+          "client_id": "672613658818-gdehf1ui961iehc46kdedshid35gbej8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.restro.foodly",
+            "certificate_hash": "0353db340c756d017d204518ff7777ba0f68f70e"
+          }
+        },
+        {
           "client_id": "672613658818-2jd3m5r87t79sh5ge2v36e7ster5q4m4.apps.googleusercontent.com",
           "client_type": 3
         }
