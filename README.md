@@ -5,3 +5,8 @@ We have made an app for food delivery with catalogues, restaurant details, Veg /
 
 # **SNAPSHOTS:-**
 <img src='https://user-images.githubusercontent.com/73791635/151673931-6acd76b0-3712-44df-a1e6-6afe4aa6b3cc.jpg' width=205 height=426>
+<img src='https://user-images.githubusercontent.com/73791635/151673939-bbd93ae2-f603-4ec5-ba51-a35d0c339b12.jpg' width=205 height=426>
+<img src='https://user-images.githubusercontent.com/73791635/151673952-022143a7-affa-4a42-8ba2-83b9edae0abb.jpg' width=205 height=426>
+<img src='https://user-images.githubusercontent.com/73791635/151673957-7261e745-0737-481c-b99c-f2272d164eeb.jpg' width=205 height=426>
+<img src='https://user-images.githubusercontent.com/73791635/151673967-3faa2707-db00-4d5a-8f11-25275573bb6d.jpg' width=205 height=426>
+
