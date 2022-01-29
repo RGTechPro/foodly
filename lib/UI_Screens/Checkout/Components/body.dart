@@ -1,14 +1,13 @@
-
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:schaffen_task/Constants/divider.dart';
 import 'package:schaffen_task/Constants/size_config.dart';
 import 'package:schaffen_task/Constants/ui.dart';
+import 'package:schaffen_task/Provider/cart.dart';
 import 'package:schaffen_task/Provider/provider.dart';
 import 'package:schaffen_task/UI_Screens/Checkout/Components/delivery_address.dart';
 import 'package:schaffen_task/UI_Screens/Checkout/Components/food_card.dart';
 import 'package:schaffen_task/UI_Screens/Order_Tracker/Components/order_summary.dart';
-
 
 class Body extends StatelessWidget {
   const Body({Key? key}) : super(key: key);
@@ -27,9 +26,15 @@ class Body extends StatelessWidget {
               children: <Widget>[
                 _OrderView(),
                 const CustomDividerView(dividerHeight: 15.0),
-                BillDetailView(deliverFee: 35,taxes: 12,total: _counter.totalSum.toDouble()),
+                BillDetailView(
+                    deliverFee: 35,
+                    taxes: 12,
+                    total: _counter.totalSum.toDouble()),
                 _DecoratedView(),
-                AddressPaymentView(address: 'Test',total: _counter.totalSum.toDouble(),),
+                AddressPaymentView(
+                  address: 'Test',
+                  total: _counter.totalSum.toDouble(),
+                ),
               ],
             ),
           ),
@@ -49,6 +54,7 @@ class _OrderViewState extends State<_OrderView> {
 
   @override
   Widget build(BuildContext context) {
+    var provider = Provider.of<Cart>(context);
     return Container(
       padding: const EdgeInsets.all(10.0),
       child: Column(
@@ -57,9 +63,8 @@ class _OrderViewState extends State<_OrderView> {
             children: <Widget>[
               ClipRRect(
                 borderRadius: BorderRadius.circular(10),
-                child: Image.asset(
-                  'assets/images/idli.jpg',
-
+                child: Image.network(
+                  provider.restroData!.r_image,
                   width: 100.0,
                 ),
               ),
@@ -67,30 +72,30 @@ class _OrderViewState extends State<_OrderView> {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Text('Breakfast Express',
+                  Text(provider.restroData!.r_name,
                       style: Theme.of(context).textTheme.subtitle2),
                   UIHelper.verticalSpaceExtraSmall(),
-                  Text('OMR Perungudi',
+                  Text(provider.restroData!.r_addr,
                       style: Theme.of(context).textTheme.bodyText1)
                 ],
               )
             ],
           ),
           UIHelper.verticalSpaceLarge(),
-          SizedBox(
-            height: getProportionateScreenHeight(120),
-            child: ListView.builder(
+          ListView.builder(
               scrollDirection: Axis.vertical,
               shrinkWrap: true,
-              itemCount: 3,
-                itemBuilder: (context,index){
-              return Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: FoodCard(isVeg: true,food: 'Idli,Wada,Dosa ,Upma',price: 200,),
-              );
-            }),
-          ),
-
+              itemCount: provider.cartList.length,
+              itemBuilder: (context, index) {
+                return Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: FoodCard(
+                    isVeg: true,
+                    food: provider.cartList[index].i_name,
+                    price: provider.cartList[index].i_price,
+                  ),
+                );
+              }),
           UIHelper.verticalSpaceExtraLarge(),
           CustomDividerView(
             dividerHeight: 1.0,
@@ -114,8 +119,6 @@ class _OrderViewState extends State<_OrderView> {
   }
 }
 
-
-
 class _DecoratedView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -125,5 +128,3 @@ class _DecoratedView extends StatelessWidget {
     );
   }
 }
-
-
