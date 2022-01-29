@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:schaffen_task/Components/bottom_navigation.dart';
 import 'package:schaffen_task/Components/button.dart';
+import 'package:schaffen_task/Constants/size_config.dart';
 import 'package:schaffen_task/Constants/ui.dart';
 import 'package:schaffen_task/Provider/cart.dart';
 import 'package:schaffen_task/Provider/provider.dart';
@@ -33,7 +34,7 @@ class _BodyState extends State<Body> {
     final _counter = Provider.of<CounterModel>(context);
     var provider = Provider.of<Cart>(context);
     return Scaffold(
-      bottomNavigationBar: BottomNavigation(),
+        bottomNavigationBar: const BottomNavigation(),
         appBar: AppBar(
           backgroundColor: Colors.black,
           centerTitle: true,
@@ -50,35 +51,41 @@ class _BodyState extends State<Body> {
           padding: const EdgeInsets.all(8),
           child: SingleChildScrollView(
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+
               children: [
                 const SizedBox(
                   height: 20,
                 ),
-                const Text(
+                Text(
                   "Order Placed",
                   style: TextStyle(
                       color: Colors.green,
-                      fontSize: 40,
+                      fontSize: getProportionateScreenWidth(40),
                       fontWeight: FontWeight.bold),
                 ),
                 const SizedBox(
                   height: 20,
                 ),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children:  [
-                    Text(
-                      "Order Id :",
-                      style: TextStyle(color: Colors.black, fontSize: 25),
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    const Text(
+                      "Order Id:",
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 22,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                     Text(
                       provider.data![0]['orderId'],
-                      style: TextStyle(
-                          color: Colors.amber,
-                          fontSize: 25,
-                          fontWeight: FontWeight.bold),
+                      style: const TextStyle(
+                          color: Colors.black,
+                          fontSize: 18,
+                          fontWeight: FontWeight.w500),
                     ),
                   ],
                 ),
@@ -86,18 +93,23 @@ class _BodyState extends State<Body> {
                   height: 10,
                 ),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children:  [
-                    Text(
-                      "Order Date :",
-                      style: TextStyle(color: Colors.black, fontSize: 25),
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    const Text(
+                      "Order Date:",
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 22,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                     Text(
                       provider.data![0]['orderTime'],
-                      style: TextStyle(
-                          color: Colors.amber,
-                          fontSize: 25,
-                          fontWeight: FontWeight.bold),
+                      style: const TextStyle(
+                          color: Colors.black,
+                          fontSize: 18,
+                          fontWeight: FontWeight.w500),
                     ),
                   ],
                 ),

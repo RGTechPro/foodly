@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:schaffen_task/Constants/size_config.dart';
 import 'package:schaffen_task/Constants/ui.dart';
 import 'package:schaffen_task/Provider/provider.dart';
-import 'package:schaffen_task/UI_Screens/Restaurant_Details/Components/veg_portion.dart';
-import 'package:schaffen_task/Models/cart_models.dart';
 import 'package:provider/provider.dart';
 
 class FoodCard extends StatefulWidget {
@@ -29,12 +27,11 @@ class _FoodCardState extends State<FoodCard> {
         UIHelper.horizontalSpaceSmall(),
         SizedBox(
           width: getProportionateScreenWidth(150),
-          child: FittedBox(
-            fit: BoxFit.cover,
-            child: Text(
-              widget.food!,
-              style: Theme.of(context).textTheme.bodyText1,
-            ),
+          child: Text(
+            widget.food!,
+            style: Theme.of(context).textTheme.bodyText1,
+            maxLines: 2,
+            overflow: TextOverflow.ellipsis,
           ),
         ),
         UIHelper.horizontalSpaceSmall(),
