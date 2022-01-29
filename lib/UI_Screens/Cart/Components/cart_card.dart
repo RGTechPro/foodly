@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:schaffen_task/Constants/size_config.dart';
 import 'package:schaffen_task/Models/cart_models.dart';
 import 'package:schaffen_task/Models/product_data.dart';
+import 'package:schaffen_task/Provider/cart.dart';
 import 'package:schaffen_task/Provider/provider.dart';
 
 class CartCard extends StatefulWidget {
@@ -22,6 +23,7 @@ class _CartCardState extends State<CartCard> {
   @override
   Widget build(BuildContext context) {
     final _counter = Provider.of<CounterModel>(context);
+    var provider = Provider.of<Cart>(context);
     return Row(
       children: [
         SizedBox(
@@ -108,6 +110,7 @@ class _CartCardState extends State<CartCard> {
               onTap: () {
                 increment(price: widget.cart!.i_price);
                 _counter.increment(price: widget.cart!.i_price);
+                widget.cart!.itemcount = order;
               },
               child: Container(
                   decoration: BoxDecoration(
@@ -133,11 +136,12 @@ class _CartCardState extends State<CartCard> {
               ],
             ),
             InkWell(
-              onTap: () { _counter.totalSum >= 0 && order > 1
+              onTap: () {
+                _counter.totalSum >= 0 && order > 1
                     ? _counter.decrement(price: widget.cart!.i_price)
                     : null;
                 order > 1 ? decrement() : null;
-               
+        widget.cart!.itemcount = order;
                 _counter.totalSum < 0 ? _counter.zero() : null;
               },
               child: Container(
