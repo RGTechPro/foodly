@@ -43,14 +43,14 @@ class OrderCard extends StatelessWidget {
                       style: const TextStyle(
                         color: Colors.black,
                         fontWeight: FontWeight.w500,
-                        fontSize: 16,
+                        fontSize: 14,
                       ),
                       children: <TextSpan>[
                         TextSpan(
                             text: orderId!,
                             style: const TextStyle(
                               fontWeight: FontWeight.w300,
-                              fontSize: 14,
+                              fontSize: 12,
                             )),
                       ],
                     ),

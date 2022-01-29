@@ -12,11 +12,16 @@ class CartScreen extends StatelessWidget {
   const CartScreen({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: buildAppBar(context),
-      body: const Body(),
-      bottomNavigationBar: const CheckoutCard(),
-    );
+    return (Provider.of<Cart>(context).cartList.length != 0)
+        ? Scaffold(
+            appBar: buildAppBar(context),
+            body: const Body(),
+            bottomNavigationBar: const CheckoutCard(),
+          )
+        : Scaffold(
+            body: Center(child: Text('CART IS EMPTY')),
+          );
+  
   }
 
   AppBar buildAppBar(BuildContext context) {
@@ -27,7 +32,7 @@ class CartScreen extends StatelessWidget {
       centerTitle: true,
       title: Column(
         children: [
-           Text(
+          Text(
             provider.restroData!.r_name,
             style: TextStyle(color: Colors.black),
           ),

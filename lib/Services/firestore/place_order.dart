@@ -40,6 +40,7 @@ Future<void> placeOrder(BuildContext context) {
 
   String totalAmount = cartProvider.totalAmount.toString();
   String discount = cartProvider.discount.toString();
+  String restro = cartProvider.restroData!.r_name;
   List<Map> myData = [
     {
       'orderId': orderId,
@@ -48,6 +49,7 @@ Future<void> placeOrder(BuildContext context) {
       'totalAmount': totalAmount,
       'discount': discount,
       'address': tempAddressData,
+      'restro': restro
     },
   ];
   cartProvider.data = myData;
