@@ -117,7 +117,7 @@ class _RecommendedFoodViewState extends State<RecommendedFoodView> {
                                   _counter.totalSumm = _counter.totalSumm +
                                       provider.restro!.veg[index].i_price:_counter.totalSumm = _counter.totalSumm +
                                       provider.restro!.non_veg[index].i_price;
-                                  final snackBar = const SnackBar(
+                                  final snackBar = const SnackBar(duration: Duration(seconds: 2),
                                       content: Text('Item Added to Cart!'));
                                   ScaffoldMessenger.of(context)
                                       .showSnackBar(snackBar);
