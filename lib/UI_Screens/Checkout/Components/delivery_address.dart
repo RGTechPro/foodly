@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:schaffen_task/Constants/constants.dart';
 import 'package:schaffen_task/Constants/ui.dart';
+import 'package:schaffen_task/Services/firestore/place_order.dart';
 import 'package:schaffen_task/UI_Screens/Deliver-Address/Components/previous_address.dart';
 import 'package:schaffen_task/UI_Screens/Order_Tracker/order_track.dart';
 
@@ -138,7 +139,9 @@ class AddressPaymentView extends StatelessWidget {
             ),
             Expanded(
               child: InkWell(
-                onTap: () {
+                onTap: ()async {
+               await   placeOrder(context);
+
                   Navigator.pushNamed(context, OrderTracker.routeName);
                 },
                 child: Container(

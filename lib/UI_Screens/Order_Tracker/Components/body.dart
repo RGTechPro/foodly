@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:schaffen_task/Components/button.dart';
 import 'package:schaffen_task/Constants/ui.dart';
+import 'package:schaffen_task/Provider/cart.dart';
 import 'package:schaffen_task/Provider/provider.dart';
 import 'package:schaffen_task/UI_Screens/Order_Tracker/Components/order_summary.dart';
 import 'package:timeline_tile/timeline_tile.dart';
@@ -29,6 +30,7 @@ class _BodyState extends State<Body> {
   @override
   Widget build(BuildContext context) {
     final _counter = Provider.of<CounterModel>(context);
+    var provider = Provider.of<Cart>(context);
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.black,
@@ -64,13 +66,13 @@ class _BodyState extends State<Body> {
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const [
+                  children:  [
                     Text(
                       "Order Id :",
                       style: TextStyle(color: Colors.black, fontSize: 25),
                     ),
                     Text(
-                      "23452345234536767",
+                      provider.data![0]['orderId'],
                       style: TextStyle(
                           color: Colors.amber,
                           fontSize: 25,
@@ -83,13 +85,13 @@ class _BodyState extends State<Body> {
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const [
+                  children:  [
                     Text(
                       "Order Date :",
                       style: TextStyle(color: Colors.black, fontSize: 25),
                     ),
                     Text(
-                      "date",
+                      provider.data![0]['orderTime'],
                       style: TextStyle(
                           color: Colors.amber,
                           fontSize: 25,
@@ -210,22 +212,24 @@ class _BodyState extends State<Body> {
                   child: SizedBox(
                     height: 50,
                     child: ElevatedButton(
-
-                      onPressed: (){
+                      onPressed: () {
                         setState(() {
                           OrderSummaryVisible = !OrderSummaryVisible;
                         });
                       },
-
-
                       style: ButtonStyle(
-                        padding: MaterialStateProperty.all(const EdgeInsets.fromLTRB(20, 0, 20, 0)),
+                        padding: MaterialStateProperty.all(
+                            const EdgeInsets.fromLTRB(20, 0, 20, 0)),
                         shadowColor: MaterialStateProperty.all(Colors.amber),
-                        backgroundColor: MaterialStateProperty.all(Colors.black),
+                        backgroundColor:
+                            MaterialStateProperty.all(Colors.black),
                         shape: MaterialStateProperty.all(
-                          RoundedRectangleBorder(borderRadius: BorderRadius.circular(20),),),
+                          RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                        ),
                       ),
-                      child:  const Text(
+                      child: const Text(
                         'Order Summary',
                         style: TextStyle(
                           color: Colors.amber,
@@ -240,8 +244,12 @@ class _BodyState extends State<Body> {
                 ),
                 Visibility(
                   visible: OrderSummaryVisible,
-                  child:  Center(
-                    child: BillDetailView(deliverFee: 35,taxes: 12,total: _counter.totalSum.toDouble(),),
+                  child: Center(
+                    child: BillDetailView(
+                      deliverFee: 35,
+                      taxes: 12,
+                      total: _counter.totalSum.toDouble(),
+                    ),
                   ),
                 ),
               ],
@@ -249,7 +257,4 @@ class _BodyState extends State<Body> {
           ),
         ));
   }
-
-
-
 }

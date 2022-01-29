@@ -4,6 +4,7 @@ import 'package:schaffen_task/Components/custom_text.dart';
 import 'package:schaffen_task/Constants/size_config.dart';
 import 'package:schaffen_task/Models/address.dart';
 import 'package:schaffen_task/Provider/address_data.dart';
+import 'package:schaffen_task/Services/firestore/place_order.dart';
 import 'package:schaffen_task/UI_Screens/Order_Tracker/order_track.dart';
 
 class AddressCard extends StatelessWidget {
@@ -30,7 +31,7 @@ class AddressCard extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           GestureDetector(
-            onTap: () {
+            onTap: ()async {
               Address addresses = Address(
                   name: firstName! + ' ' + lastName!,
                   address: address!,
@@ -38,6 +39,8 @@ class AddressCard extends StatelessWidget {
                   city: city!);
               Provider.of<AddressData>(context, listen: false).selected =
                   addresses;
+                      await   placeOrder(context);
+
               Navigator.pushNamed(context, OrderTracker.routeName);
             },
             child: Card(
