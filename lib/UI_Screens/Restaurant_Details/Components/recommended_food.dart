@@ -105,15 +105,23 @@ class _RecommendedFoodViewState extends State<RecommendedFoodView> {
                           InkWell(
                               onTap: () {
                                 setState(() {
-                                  Provider.of<Cart>(context,listen: false).restroData =
-                                      provider.restro;
-                                  Provider.of<Cart>(context,listen: false).cartList.add(
-                                      _counter.isVeg
+                                  Provider.of<Cart>(context, listen: false)
+                                      .restroData = provider.restro;
+                                  Provider.of<Cart>(context, listen: false)
+                                      .cartList
+                                      .add(_counter.isVeg
                                           ? provider.restro!.veg[index]
                                           : provider.restro!.non_veg[index]);
-                                final snackBar = const SnackBar(content: Text('Item Added to Cart!'));
-                  ScaffoldMessenger.of(context).showSnackBar(snackBar);
-                                //  isAdd = !isAdd!;
+
+                                         _counter.isVeg ?
+                                  _counter.totalSumm = _counter.totalSumm +
+                                      provider.restro!.veg[index].i_price:_counter.totalSumm = _counter.totalSumm +
+                                      provider.restro!.non_veg[index].i_price;
+                                  final snackBar = const SnackBar(
+                                      content: Text('Item Added to Cart!'));
+                                  ScaffoldMessenger.of(context)
+                                      .showSnackBar(snackBar);
+                                  //  isAdd = !isAdd!;
                                 });
                               },
                               child: AddBtnView(

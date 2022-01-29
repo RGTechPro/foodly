@@ -18,7 +18,7 @@ class CartCard extends StatefulWidget {
 }
 
 class _CartCardState extends State<CartCard> {
-  int order = 0;
+  int order = 1;
   @override
   Widget build(BuildContext context) {
     final _counter = Provider.of<CounterModel>(context);
@@ -133,11 +133,11 @@ class _CartCardState extends State<CartCard> {
               ],
             ),
             InkWell(
-              onTap: () {
-                order > 0 ? decrement() : null;
-                _counter.totalSum >= 0 && order >= 0
+              onTap: () { _counter.totalSum >= 0 && order > 1
                     ? _counter.decrement(price: widget.cart!.i_price)
                     : null;
+                order > 1 ? decrement() : null;
+               
                 _counter.totalSum < 0 ? _counter.zero() : null;
               },
               child: Container(

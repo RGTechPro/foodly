@@ -1,32 +1,28 @@
 import 'package:flutter/material.dart';
 
-
-
 class CounterModel with ChangeNotifier {
-  double _totalSum = 0;
- bool _isVeg=true;
-  double get totalSum => _totalSum;
-  bool get isVeg=>_isVeg;
+  double totalSumm = 0;
+  bool _isVeg = true;
+  double get totalSum => totalSumm;
+  bool get isVeg => _isVeg;
+ 
+  void zero() {
+    totalSumm = 0;
+    notifyListeners();
+  }
 
-  void zero()
-  {
-    _totalSum=0;
+  void increment({double? price}) {
+    totalSumm += price!;
     notifyListeners();
   }
-  void increment({double?price}) {
-    _totalSum+=price!;
+
+  void decrement({double? price}) {
+    totalSumm -= price!;
     notifyListeners();
   }
-  void decrement({double?price}) {
-    _totalSum-=price!;
-    notifyListeners();
-  }
-  void change()
-  {
-    _isVeg=!_isVeg;
+
+  void change() {
+    _isVeg = !_isVeg;
     notifyListeners();
   }
 }
-
-
-
